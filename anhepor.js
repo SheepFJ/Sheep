@@ -2,8 +2,7 @@
 
 项目名称：复盘盒子
 [rewrite_local]
-^https?:\/\/www\.fupanhezi\.com\/usercenter\/v1\/user\/detail url script-response-body https://github.com/SheepFJ/Sheep/blob/main/anhepor.js
-
+^https?:\/\/www\.fupanhezi\.com\/usercenter\/v1\/user\/detail url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/anhepor.js
 [mitm]
 hostname = www.fupanhezi.com
 *************************************/
