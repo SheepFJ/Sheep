@@ -9,7 +9,7 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/wx\.douxuejiaoyu\.com\/(app\/iap\/goods_detail_v2|wxpub\/api\/video_show|wxpub\/api\/video_play_detail) url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/zhiliaozhuanshengben.js  
+^https:\/\/wx\.douxuejiaoyu\.com\/(app\/iap\/goods_detail_v2|wxpub\/api\/video_show|wxpub\/api\/video_play_detail) url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/zhiliaozhuanshengben1.js  
 [mitm]
 hostname = wx.douxuejiaoyu.com
 
