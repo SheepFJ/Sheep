@@ -10,9 +10,9 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/wx\.douxuejiaoyu\.com\/(app\/iap\/goods_detail_v2|wxpub\/api\/video_show|wxpub\/api\/video_play_detail) url script-response-body  
+^https:\/\/wx\.douxuejiaoyu\.com\/(app\/iap\/goods_detail_v2|wxpub\/api\/video_show|wxpub\/api\/video_play_detail) url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/zhiliaozhuanshengben.js  
 [mitm]
-hostname = api.revenuecat.com
+hostname = wx.douxuejiaoyu.com
 
 *************************************/
 
