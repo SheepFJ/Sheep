@@ -9,7 +9,7 @@
 **************************************
 
 [rewrite_local]
-^https://dlabel\.ctaiot\.com/api/welfare/list url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/yunbiaoqian3.js  
+^https://dlabel\.ctaiot\.com/api/(welfare/list|push/list) url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/yunbiaoqian3.js  
 [mitm]
 hostname = dlabel.ctaiot.com
 
