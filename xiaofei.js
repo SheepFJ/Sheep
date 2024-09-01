@@ -10,7 +10,7 @@
 **************************************
 
 [rewrite_local]
-^https://www\.szyhznkj\.net/xcxInterface/xcxapi/webXFUpSaveOrderNew url script-request-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/xiaofei.js  
+^https:\/\/www\.szyhznkj\.net\/xcxInterface\/xcxapi\/webXFUpSaveOrderNew url script-request-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/xiaofei.js  
 [mitm]
 hostname = www.szyhznkj.net
 
