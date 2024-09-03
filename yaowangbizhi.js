@@ -8,7 +8,7 @@
 **************************************
 
 [rewrite_local]
-^https://ins-web\.whalean\.com/member/userMemberHomePageV2 url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/bizhi1.js  
+^https://ins-web\.whalean\.com/member/userMemberHomePageV2 url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/yaowangbizhi.js  
 [mitm]
 hostname = ins-web.whalean.com
 
