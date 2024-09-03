@@ -21,9 +21,9 @@ const vip = '/member/userMemberHomePageV2';
 
 if (url.indexOf(vip) != -1) {  
 
-obj.data.memberInfos[0].isMember=0;
-obj.data.memberInfos[0].memberLevel=0;
-
+obj.data.memberInfos[0].isMember=1;
+obj.data.memberInfos[0].memberLevel=1;
+obj.data.memberInfos[0].permanent=true;
 obj.data.memberInfos[0].memberExpirationTime
 ="2099/09/09";
 
