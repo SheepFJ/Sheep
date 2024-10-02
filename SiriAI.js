@@ -1,3 +1,28 @@
+/*************************************
+项目名称：滚动截屏
+下载地址：http://985.so/k8iqa
+更新日期：2024-08-21
+脚本作者：Sheep
+使用声明：⚠️仅供参考，🈲转载与售卖！
+脚本说明；解锁vip，不受积分限制
+
+**************************************
+
+[rewrite_local]
+ ^https:\/\/chatme-backend-d5f358e587a4\.herokuapp\.com\/chatme\/api\/v1\/ask\/text url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/SiriAI.js  
+
+ ^https:\/\/chatme-backend-d5f358e587a4\.herokuapp\.com\/chatme\/api\/v1\/ask\/text url script-request-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/SiriAI.js  
+
+
+[mitm]
+hostname = chatme-backend-d5f358e587a4.herokuapp.com
+
+*************************************/
+
+
+
+
+
 const basePathWenti = "/sheep/wenti/"; 
 const basePathDaan = "/sheep/daan/"; 
 const chatPath = "/chatme/api/v1/ask/text"; 
