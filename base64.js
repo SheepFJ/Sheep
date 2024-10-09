@@ -1,5 +1,5 @@
-let param = $argument; // 接收快捷指令传递的参数
-console.log(param); // 输出参数，方便调试
+let param = typeof $argument !== 'undefined' ? $argument : null;
+console.log("Received argument: ", param);
 
 const boundary = "----WebKitFormBoundary" + Math.random().toString(36).substr(2);
 const fileName = "IMG_0704.jpeg";
