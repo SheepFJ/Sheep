@@ -1,6 +1,11 @@
-let param = typeof $argument !== 'undefined' ? $argument : null;
-console.log("Received argument: ", param);
+let param = typeof $argument !== 'undefined' && $argument ? JSON.parse($argument) : null;
 
+if (param && param.base64Data) {
+    let imageData = param.base64Data;
+    console.log("Received Base64 image data: ", imageData);
+} else {
+    console.log("No valid Base64 data received.");
+}
 const boundary = "----WebKitFormBoundary" + Math.random().toString(36).substr(2);
 const fileName = "IMG_0704.jpeg";
 const token = "367|bbme2uLA1xhYzXbebqRytYM5D1R38JQUOWOhEr2k"; // 替换为实际 Token
