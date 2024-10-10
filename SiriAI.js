@@ -59,7 +59,7 @@ if (latestResponseContent) {
                 "Content-Type": "application/json; charset=utf-8",
                 "Connection": "Close"
             },
-            body: "<html><body><h1>没有获取到结果，可能的原因：1. 没有添加重写 2. 没有添加主机名 3. 分流规则设置不当 </h1></body></html>"
+            body: "<html><body><h1>没有获取到结果，可能的原因：0.第一个问题请选择“新问题”选项1. 没有添加重写 2. 没有添加主机名 3. 分流规则设置不当 </h1></body></html>"
         });
     }
 
@@ -116,7 +116,7 @@ if (latestResponseContent) {
                 "Content-Type": "text/html; charset=utf-8",
                 "Connection": "Close"
             },
-            body: "<html><body><h1>没有获取到结果，可能的原因：1. 没有添加重写 2. 没有添加主机名 3. 分流规则设置不当</h1></body></html>"
+            body: "<html><body><h1>没有获取到结果，可能的原因：0.第一个问题请选择“新问题”选项1. 没有添加重写 2. 没有添加主机名 3. 分流规则设置不当</h1></body></html>"
         });
     }
 
@@ -208,6 +208,6 @@ if (latestResponseContent) {
             "Content-Type": "text/html; charset=utf-8",
             "Connection": "Close"
         },
-        body: "<html><body><h1>没有获取到结果，可能的原因：1. 没有添加重写 2. 没有添加主机名 3. 分流规则设置不当</h1></body></html>"
+        body: "<html><body><h1>没有获取到结果，可能的原因：0.第一个问题请选择“新问题”选项1. 没有添加重写 2. 没有添加主机名 3. 分流规则设置不当</h1></body></html>"
     });
 }
