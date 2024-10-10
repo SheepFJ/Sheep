@@ -15,10 +15,18 @@
 hostname = www.51xinwei.com
 *************************************/
 
-if ($request) {
-    // 代码一部分 - 请求重写
-    let body = JSON.parse($request.body);
+var body = $response ? $response.body : $request.body; // 根据响应或请求体进行处理
+var url = $request.url;
+var obj = JSON.parse(body);
 
+// 定义三个不同的路径
+const vipPath = '/api/learning-service/admin/studentLearning/videoLearnProcessReport';
+const userDetailPath = '/api/learning-service/admin/studentLearning/getChapterData';
+const anotherPath = '/api/learning-service/admin/studentLearning/getSingleChapterData';
+
+// 根据路径进行不同的处理
+if (url.indexOf(vipPath) != -1) {
+    // 代码一部分：处理 playbackRate
     function modifyRequestObject(obj) {
         for (let key in obj) {
             if (obj.hasOwnProperty(key)) {
@@ -32,66 +40,57 @@ if ($request) {
             }
         }
     }
+    modifyRequestObject(obj);
+    body = JSON.stringify(obj);
 
-    modifyRequestObject(body);
-    $done({ body: JSON.stringify(body) });
-
-} else if ($response) {
-    // 根据不同的URL进行判断，选择不同的逻辑处理
-    if ($request.url.includes('https://www.51xinwei.com/api/learning-service/admin/studentLearning/getChapterData')) {
-        // 代码二部分 - 响应重写
-        let body = JSON.parse($response.body);
-
-        function modifyResponseObject(obj) {
-            for (let key in obj) {
-                if (obj.hasOwnProperty(key)) {
-                    if (typeof obj[key] === 'object' && obj[key] !== null) {
-                        modifyResponseObject(obj[key]);
-                    } else {
-                        if (key === 'status') {
-                            obj[key] = 2;
-                        }
+} else if (url.indexOf(userDetailPath) != -1) {
+    // 代码二部分：处理 status
+    function modifyResponseObject(obj) {
+        for (let key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                if (typeof obj[key] === 'object' && obj[key] !== null) {
+                    modifyResponseObject(obj[key]);
+                } else {
+                    if (key === 'status') {
+                        obj[key] = 2;
                     }
                 }
             }
         }
-
-        modifyResponseObject(body);
-        $done({ body: JSON.stringify(body) });
-
-    } else {
-        // 代码三部分 - 响应重写
-        let body = JSON.parse($response.body);
-
-        function modifyAnotherResponseObject(obj) {
-            for (let key in obj) {
-                if (obj.hasOwnProperty(key)) {
-                    if (typeof obj[key] === 'object' && obj[key] !== null) {
-                        modifyAnotherResponseObject(obj[key]);
-                    } else {
-                        if (key === 'showPlaybackRate') {
-                            obj[key] = true;
-                        }
-                        if (key === 'showLearnTrack') {
-                            obj[key] = true;
-                        }
-                        if (key === 'canDragger') {
-                            obj[key] = true;
-                        }
-                        if (key === 'isShowHint') {
-                            obj[key] = true;
-                        }
-                        if (key === 'completeStatus') {
-                            obj[key] = "1";
-                        }
-                    }
-                }
-            }
-        }
-
-        modifyAnotherResponseObject(body);
-        $done({ body: JSON.stringify(body) });
     }
+    modifyResponseObject(obj);
+    body = JSON.stringify(obj);
+
+} else if (url.indexOf(anotherPath) != -1) {
+    // 代码三部分：处理其他字段
+    function modifyAnotherResponseObject(obj) {
+        for (let key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                if (typeof obj[key] === 'object' && obj[key] !== null) {
+                    modifyAnotherResponseObject(obj[key]);
+                } else {
+                    if (key === 'showPlaybackRate') {
+                        obj[key] = true;
+                    }
+                    if (key === 'showLearnTrack') {
+                        obj[key] = true;
+                    }
+                    if (key === 'canDragger') {
+                        obj[key] = true;
+                    }
+                    if (key === 'isShowHint') {
+                        obj[key] = true;
+                    }
+                    if (key === 'completeStatus') {
+                        obj[key] = "1";
+                    }
+                }
+            }
+        }
+    }
+    modifyAnotherResponseObject(obj);
+    body = JSON.stringify(obj);
 }
 
-
+// 返回处理后的响应体
+$done({ body });
