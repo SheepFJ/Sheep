@@ -23,6 +23,7 @@ hostname = chatme-backend-d5f358e587a4.herokuapp.com
 
 
 const basePathWenti = "/sheep/wenti/"; 
+const basePathurl = "/sheep/url/";
 const basePathDaan = "/sheep/daan/"; 
 const chatPath = "/chatme/api/v1/ask/text"; 
 
@@ -166,7 +167,76 @@ if (latestResponseContent) {
 
         $done();
 
-    } else if ($request) {
+    } else if  ($request && $request.path.startsWith(basePathurl)){
+        
+        // 1. 读取存储的 URL 列表
+let storedUrls = $prefs.valueForKey("local_image_urls");
+
+// 2. 检查 URL 列表是否存在并解析为数组
+if (storedUrls) {
+  let urlList = JSON.parse(storedUrls);
+
+  // 3. 取最近的 10 个 URL（如果不足 10 个则取全部）
+  let latestUrls = urlList.slice(-10).reverse();
+
+  // 4. 构造 HTML 输出，将每个 URL 显示为图片预览
+  let htmlContent = `
+<meta charset="UTF-8">
+    <html>
+      <body>
+        <h1>显示最近的10张图片</h1>
+  `;
+
+  // 5. 使用循环将每个 URL 添加到 HTML 中
+  latestUrls.forEach((url, index) => {
+    htmlContent += `
+      <div>
+        <h2>Image ${index + 1}</h2>
+        <p><a href="${url}">${url}</a></p>
+        <img src="${url}" alt="Image Preview" style="max-width:100%; height:auto;"/>
+      </div>
+      <hr/>
+    `;
+  });
+
+  htmlContent += `
+      </body>
+    </html>
+  `;
+
+  // 6. 返回构造好的 HTML 内容作为响应体
+  $done({
+    status: "HTTP/1.1 200 OK",
+    headers: {
+      "Content-Type": "text/html"
+    },
+    body: htmlContent
+  });
+} else {
+  // 7. 如果没有存储的 URL，返回提示信息
+  let errorContent = `
+    <html>
+      <body>
+        <h1>No URLs Found</h1>
+        <p>No URLs have been stored yet.</p>
+      </body>
+    </html>
+  `;
+
+  $done({
+    status: "HTTP/1.1 404 Not Found",
+    headers: {
+      "Content-Type": "text/html"
+    },
+    body: errorContent
+  });
+}
+
+        
+        
+    }
+    
+    else if ($request) {
         let body = $request.body;
         let regex = /"content"\s*:\s*"([^"]*)"\s*,\s*"role"\s*:\s*"user"/g;
         let match;
@@ -201,7 +271,8 @@ if (latestResponseContent) {
         $done();
     }
 
-} else {
+} 
+else {
     $done({
         status: "HTTP/1.1 404 Not Found",
         headers: {
