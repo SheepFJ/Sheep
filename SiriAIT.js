@@ -18,10 +18,14 @@ hostname = securetoken.googleapis.com,genie-production-yfvxbm4e6q-uc.a.run.app
 
 *************************************/
 
+// 合并代码结构
 
+const tokenPath = "/v1/token";
+const chatPathCompletions = "/chats/local/completions";
+const backendPathUrl = "/sheep/url/";
 
-// 1. 第一个响应体重写功能 - 匹配路径: ^https:\/\/securetoken\.googleapis\.com\/v1\/token
-if ($request.url.match(/^https:\/\/securetoken\.googleapis\.com\/v1\/token/)) {
+// 1. 第一个响应体重写功能 - 匹配路径: "/v1/token"
+if ($request && $request.path.startsWith(tokenPath)) {
     // 代码一
     let body = $response.body;
     let obj = JSON.parse(body);
@@ -36,8 +40,8 @@ if ($request.url.match(/^https:\/\/securetoken\.googleapis\.com\/v1\/token/)) {
     $done({});
 }
 
-// 2. 第二个请求头部重写功能 - 匹配路径: ^https:\/\/genie-production-yfvxbm4e6q-uc\.a\.run\.app\/chats\/local\/completions
-else if ($request.url.match(/^https:\/\/genie-production-yfvxbm4e6q-uc\.a\.run\.app\/chats\/local\/completions/)) {
+// 2. 第二个请求头部重写功能 - 匹配路径: "/chats/local/completions"
+else if ($request && $request.path.startsWith(chatPathCompletions)) {
     // 代码二
     let accessToken = $prefs.valueForKey("local_access_token");
 
@@ -51,8 +55,8 @@ else if ($request.url.match(/^https:\/\/genie-production-yfvxbm4e6q-uc\.a\.run\.
     }
 }
 
-// 3. 第三个响应体重写功能 - 匹配路径: ^https:\/\/genie-production-yfvxbm4e6q-uc\.a\.run\.app\/chats\/local\/completions
-else if ($response.url.match(/^https:\/\/genie-production-yfvxbm4e6q-uc\.a\.run\.app\/chats\/local\/completions/)) {
+// 3. 第三个响应体重写功能 - 匹配路径: "/chats/local/completions"
+else if ($response && $response.url.includes(chatPathCompletions)) {
     // 代码三
     let body = $response.body;
 
@@ -96,8 +100,8 @@ else if ($response.url.match(/^https:\/\/genie-production-yfvxbm4e6q-uc\.a\.run\
     $done({ body });
 }
 
-// 4. 第四个 HTTP backend 功能 - 匹配路径: http://127.0.0.1:9999/sheep/url/
-else if ($request.path.match(/^\/sheep\/url\//)) {
+// 4. 第四个 HTTP backend 功能 - 匹配路径: "/sheep/url/"
+else if ($request && $request.path.startsWith(backendPathUrl)) {
     // 代码四
     let storedUrls = $prefs.valueForKey("local_image_urls");
 
@@ -154,3 +158,4 @@ else if ($request.path.match(/^\/sheep\/url\//)) {
         });
     }
 }
+
