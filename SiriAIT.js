@@ -52,51 +52,7 @@ else if ($request && $request.path.startsWith(chatPathCompletions)) {
         console.log("Access token not found.");
         $done({});
     }
-} else if ($response && $response.url.includes(chatPathCompletions)) {
-    // 代码三 - 接着修改响应体
-    let body = $response.body;
-
-    let contentArray = [];
-    let contentRegex = /data: \{"content":"(.*?)"\}/g;
-    let matchContent = contentRegex.exec(body);
-
-    let urlRegex = /"url":"(https:\/\/[^"]+)"/g;
-    let matchUrl = urlRegex.exec(body);
-
-    if (matchContent) {
-        while ((matchContent = contentRegex.exec(body)) !== null) {
-            contentArray.push(matchContent[1]);
-        }
-
-        let combinedContent = contentArray.join("");
-        $prefs.setValueForKey(combinedContent, "combinedContent");
-        console.log("拼接后的内容: " + combinedContent);
-    } else if (matchUrl) {
-        let newUrl = matchUrl[1];
-        let existingUrls = $prefs.valueForKey("local_image_urls");
-
-        if (existingUrls) {
-            existingUrls = JSON.parse(existingUrls);
-            if (!existingUrls.includes(newUrl)) {
-                existingUrls.push(newUrl);
-            }
-            if (existingUrls.length > 10) {
-                existingUrls.shift();
-            }
-        } else {
-            existingUrls = [newUrl];
-        }
-
-        $prefs.setValueForKey(JSON.stringify(existingUrls), "local_image_urls");
-        console.log("Successfully saved image URL: " + newUrl);
-    } else {
-        console.log("Neither content nor URL found.");
-    }
-
-    $done({ body });
-}
-
-// 3. 处理 "/sheep/url/" 路径的 HTTP backend 请求
+} // 3. 处理 "/sheep/url/" 路径的 HTTP backend 请求
 else if ($request && $request.path.startsWith(backendPathUrl)) {
     // 代码四 - 显示最近的 10 个图片 URL
     let storedUrls = $prefs.valueForKey("local_image_urls");
