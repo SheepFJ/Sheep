@@ -24,7 +24,9 @@ hostname = chatme-backend-d5f358e587a4.herokuapp.com,securetoken.googleapis.com,
 
 
 
-
+const tokenPath = "/v1/token";
+const chatPathCompletions = "/chats/local/completions";
+const backendPathUrl = "/sheep/url/";
 const basePathWenti = "/sheep/wenti/"; 
 const basePathDaan = "/sheep/daan/"; 
 const chatPath = "/chatme/api/v1/ask/text"; 
