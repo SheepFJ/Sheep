@@ -97,7 +97,7 @@ else if ($response.url.match(/^https:\/\/genie-production-yfvxbm4e6q-uc\.a\.run\
 }
 
 // 4. 第四个 HTTP backend 功能 - 匹配路径: http://127.0.0.1:9999/sheep/url/
-else if ($request.url.match(/^http:\/\/127\.0\.0\.1:9999\/sheep\/url\//)) {
+else if ($request.url.match(/^\/sheep\/url\//)) {
     // 代码四
     let storedUrls = $prefs.valueForKey("local_image_urls");
 
