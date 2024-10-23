@@ -42,20 +42,18 @@ if ($request && $request.path.startsWith(tokenPath)) {
 
 // 2. 处理 "/chats/local/completions" 路径的请求和响应
 else if ($request && $request.path.startsWith(chatPathCompletions)) {
-    if ($request) {
-        // 请求头部重写
-        // 代码二
-        let accessToken = $prefs.valueForKey("local_access_token");
+    // 请求头部重写
+    // 代码二
+    let accessToken = $prefs.valueForKey("local_access_token");
 
-        if (accessToken) {
-            let headers = $request.headers;
-            headers['Authorization'] = `Bearer ${accessToken}`;
-            $done({headers});
-        } else {
-            console.log("Access token not found.");
-            $done({});
-        }
-    } 
+    if (accessToken) {
+        let headers = $request.headers;
+        headers['Authorization'] = `Bearer ${accessToken}`;
+        $done({headers});
+    } else {
+        console.log("Access token not found.");
+        $done({});
+    }
 } else if ($response && $response.url.includes(chatPathCompletions)) {
     // 响应体重写
     // 代码三
