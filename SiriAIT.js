@@ -18,18 +18,15 @@ hostname = securetoken.googleapis.com,genie-production-yfvxbm4e6q-uc.a.run.app
 
 *************************************/
 
-// 合并代码结构
-
 const tokenPath = "/v1/token";
 const chatPathCompletions = "/chats/local/completions";
 const backendPathUrl = "/sheep/url/";
 
-// 1. 第一个响应体重写功能 - 匹配路径: "/v1/token"
+// 1. 处理 "/v1/token" 路径的响应
 if ($request && $request.path.startsWith(tokenPath)) {
-    // 代码一
+    // 代码一 - 修改响应体并存储 token
     let body = $response.body;
     let obj = JSON.parse(body);
-
     let accessToken = obj.access_token;
 
     if (accessToken) {
@@ -42,21 +39,21 @@ if ($request && $request.path.startsWith(tokenPath)) {
 
 // 2. 处理 "/chats/local/completions" 路径的请求和响应
 else if ($request && $request.path.startsWith(chatPathCompletions)) {
-    // 请求头部重写
-    // 代码二
+    // 代码二 - 先修改请求头
     let accessToken = $prefs.valueForKey("local_access_token");
 
     if (accessToken) {
         let headers = $request.headers;
         headers['Authorization'] = `Bearer ${accessToken}`;
-        $done({headers});
+
+        // 修改请求头后，等待响应的到来
+        $done({ headers });
     } else {
         console.log("Access token not found.");
         $done({});
     }
 } else if ($response && $response.url.includes(chatPathCompletions)) {
-    // 响应体重写
-    // 代码三
+    // 代码三 - 接着修改响应体
     let body = $response.body;
 
     let contentArray = [];
@@ -99,9 +96,9 @@ else if ($request && $request.path.startsWith(chatPathCompletions)) {
     $done({ body });
 }
 
-// 4. 第四个 HTTP backend 功能 - 匹配路径: "/sheep/url/"
+// 3. 处理 "/sheep/url/" 路径的 HTTP backend 请求
 else if ($request && $request.path.startsWith(backendPathUrl)) {
-    // 代码四
+    // 代码四 - 显示最近的 10 个图片 URL
     let storedUrls = $prefs.valueForKey("local_image_urls");
 
     if (storedUrls) {
