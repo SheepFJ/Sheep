@@ -40,24 +40,25 @@ if ($request && $request.path.startsWith(tokenPath)) {
     $done({});
 }
 
-// 2. 请求头部重写功能 - 匹配路径: "/chats/local/completions"
+// 2. 处理 "/chats/local/completions" 路径的请求和响应
 else if ($request && $request.path.startsWith(chatPathCompletions)) {
-    // 代码二：请求头部处理
-    let accessToken = $prefs.valueForKey("local_access_token");
+    if ($request) {
+        // 请求头部重写
+        // 代码二
+        let accessToken = $prefs.valueForKey("local_access_token");
 
-    if (accessToken) {
-        let headers = $request.headers;
-        headers['Authorization'] = `Bearer ${accessToken}`;
-        $done({headers});
-    } else {
-        console.log("Access token not found.");
-        $done({});
-    }
-}
-
-// 3. 响应体重写功能 - 匹配路径: "/chats/local/completions"
-else if ($response && $request.path.startsWith(chatPathCompletions)) {
-    // 代码三：响应体处理
+        if (accessToken) {
+            let headers = $request.headers;
+            headers['Authorization'] = `Bearer ${accessToken}`;
+            $done({headers});
+        } else {
+            console.log("Access token not found.");
+            $done({});
+        }
+    } 
+} else if ($response && $response.url.includes(chatPathCompletions)) {
+    // 响应体重写
+    // 代码三
     let body = $response.body;
 
     let contentArray = [];
@@ -102,7 +103,7 @@ else if ($response && $request.path.startsWith(chatPathCompletions)) {
 
 // 4. 第四个 HTTP backend 功能 - 匹配路径: "/sheep/url/"
 else if ($request && $request.path.startsWith(backendPathUrl)) {
-    // 代码四：处理HTTP backend
+    // 代码四
     let storedUrls = $prefs.valueForKey("local_image_urls");
 
     if (storedUrls) {
