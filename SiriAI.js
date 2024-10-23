@@ -17,7 +17,7 @@
 ^https:\/\/genie-production-yfvxbm4e6q-uc\.a\.run\.app\/chats\/local\/completions url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/SiriAIT.js
 
 [mitm]
-hostname = chatme-backend-d5f358e587a4.herokuapp.com
+hostname = chatme-backend-d5f358e587a4.herokuapp.com,securetoken.googleapis.com,genie-production-yfvxbm4e6q-uc.a.run.app
 
 *************************************/
 
