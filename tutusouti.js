@@ -10,7 +10,7 @@
 [rewrite_local]
 ^https://api-service\.tutusouti\.com/appServiceApi/vip/newUserPayVipData url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/tutusouti.js  
 [mitm]
-hostname = www.daxuesoutijiang.com
+hostname = api-service.tutusouti.com
 
 *************************************/
 
