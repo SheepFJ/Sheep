@@ -10,6 +10,8 @@
 [rewrite_local]
 ^https://api-service\.tutusouti\.com/appServiceApi/vip/newUserPayVipData url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/kaotudaxuesouti/vip.js
 ^https://api-service\.tutusouti\.com/appServiceApi/video/videoDetail url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/kaotudaxuesouti/video.js  
+^https://api-service\.tutusouti\.com/appServiceApi/account/categoryList url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/kaotudaxuesouti/yl.js
+
 [mitm]
 hostname = api-service.tutusouti.com
 
