@@ -23,6 +23,9 @@ function modifyObject(obj) {
                 if (key === 'isVip') {
                     obj[key] = 1;
                 }
+                if (key === 'endTime') {
+                    obj[key] = 4077158400;
+                }
             }
         }
     }
