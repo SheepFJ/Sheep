@@ -14,8 +14,8 @@
 **************************************
 
 [rewrite_local]
-^https://api\.sheepTask\.com/xiaomishuabushu/ url script-request-header https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheep_rewrite_local/xiaomishuabushu.js
+^https://api\.sheeptask\.com/xiaomishuabushu/ url script-request-header https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheep_rewrite_local/xiaomishuabushu.js
 [mitm]
-hostname = api.sheepTask.com
+hostname = api.sheeptask.com
 
 *************************************/
