@@ -31,10 +31,10 @@ $task.fetch(myRequest).then(response => {
     const responseBody = response.body;
     
     // 显示步数和响应结果的通知
-    $notify("提交成功", `刷的步数: ${steps}`);
+    $notify("提交成功","", `刷的步数: ${steps}`);
     $done();
 }, reason => {
     // 请求出错时显示通知
-    $notify("步数提交失败", "请求出错", `错误信息: ${reason.error}`);
+    $notify("步数提交失败","", `请求出错错误信息: ${reason.error}`);
     $done();
 });
