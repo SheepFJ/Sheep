@@ -1,4 +1,10 @@
-// 从本地存储中获取账号、密码和步数范围
+
+/*
+❕使用教程
+1.下载Zeep Life,app里面--我的👉第三方接入👉绑定微信或者支付宝
+2.记住账号密码与要刷的步数范围填写到下方链接后在浏览器运行一次"    https://api\.sheeptask\.com/xiaomishuabushu/你的账号/你的密码/最小步数/最大步数/    "
+*/
+
 const account = encodeURIComponent($prefs.valueForKey("sheep_account_xiaomishuabushu") || "");
 const password = encodeURIComponent($prefs.valueForKey("sheep_password_xiaomishuabushu") || "");
 const minSteps = parseInt($prefs.valueForKey("sheep_min_steps_xiaomishuabushu") || "5000");
@@ -9,6 +15,7 @@ const steps = Math.floor(Math.random() * (maxSteps - minSteps + 1)) + minSteps;
 const encodedSteps = encodeURIComponent(steps);
 
 // 构建请求的 URL
+//api接口来自作者Mingyu：https://github.com/ymyuuu/Steps-API
 const url = `https://steps.api.030101.xyz/api?account=${account}&password=${password}&steps=${encodedSteps}`;
 
 const method = "GET";
@@ -24,7 +31,7 @@ $task.fetch(myRequest).then(response => {
     const responseBody = response.body;
     
     // 显示步数和响应结果的通知
-    $notify("步数提交结果", `提交的步数: ${steps}`, `状态码: ${statusCode}\n响应内容: ${responseBody}`);
+    $notify("提交成功", `刷的步数: ${steps}`);
     $done();
 }, reason => {
     // 请求出错时显示通知
