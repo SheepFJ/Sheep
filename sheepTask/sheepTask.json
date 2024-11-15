@@ -2,6 +2,7 @@
     "name": "sheepTask",
     "description": "日常任务，添加后右划查看帮助",
     "task": [
-        "21 21 * * * https://raw.githubusercontent.com/deezertidal/private/main/km.js,tag=酷狗音乐热歌榜, img-url=headphones.system,enabled=true"
+        "00 21 * * * https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/xiaomishuabushu.js,tag=微信刷步数, img-url=headphones.system,enabled=true"
+        
     ]
 }
