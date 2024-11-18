@@ -37,7 +37,7 @@ if (typeof $response == "undefined") {
     var UA = $request.headers['user-agent'];
     const app = '1';
     const UAMappings = {
-        'Finale%E2%80%A2Pad': { name: 'non_subscriptions', id: 'eticket_with_watch_1y_7d0' }
+        'Finale%E2%80%A2Pad': { name: 'subscriptions', id: 'eticket_with_watch_1y_7d0' }
     };
 
     const data = {
