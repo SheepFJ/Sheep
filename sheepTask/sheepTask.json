@@ -1,8 +1,9 @@
 {
     "name": "sheepTask",
-    "description": "日常任务，添加后右划查看帮助",
+    "description": "日常任务，部分任务添加后需右划查看帮助才能正常执行",
     "task": [
-        "00 21 * * * https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/xiaomishuabushu.js,tag=微信刷步数, img-url=headphones.system,enabled=true"
+        "00 21 * * * https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/xiaomishuabushu.js,tag=微信刷步数,enabled=true",
+         "08 12 * * * https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/jianxun.js,tag=一条简短的讯息,enabled=true"
         
     ]
 }
