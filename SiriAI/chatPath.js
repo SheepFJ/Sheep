@@ -1,83 +1,26 @@
- if ($response) {
-        let body = $response.body;
-        let regex = /"content":"(.*?)"/g;
-        let match;
-        let baseKey = "combined_content_response";
-        let index = 0;
+if ($response) { 
+    let body = $response.body;
+    let regex = /"content":"(.*?)"/g;
+    let match;
+    let combinedContent = '';  // 用于拼接 content 的字符串
+    let baseKey = "combined_content_response";
+    let index = 0;
 
-        while ($prefs.valueForKey(baseKey + (index === 0 ? "" : index))) {
-            let storedContent = $prefs.valueForKey(baseKey + (index === 0 ? "" : index));
-            if (storedContent) {
-                body = body.replace(`"content":"${storedContent}"`, '');
-            }
-            index++;
-        }
-
-        index = 0;
-        while ($prefs.valueForKey(baseKey + (index === 0 ? "" : index))) {
-            index++;
-        }
-
-        while ((match = regex.exec(body)) !== null) {
-            let content = match[1];
-            let safeContent = JSON.stringify(content).slice(1, -1);
-            let storageKey = baseKey + (index === 0 ? "" : index);
-
-            let alreadyStored = false;
-            for (let i = 0; i <= index; i++) {
-                let storedValue = $prefs.valueForKey(baseKey + (i === 0 ? "" : i));
-                if (storedValue === safeContent) {
-                    alreadyStored = true;
-                    break;
-                }
-            }
-
-            if (!alreadyStored) {
-                $prefs.setValueForKey(safeContent, storageKey);
-                
-                index++;
-            }
-        }
-
-        $done();
-
-    }    else if ($request) {
-        let body = $request.body;
-        let regex = /"content"\s*:\s*"([^"]*)"\s*,\s*"role"\s*:\s*"user"/g;
-        let match;
-        let lastContent = null;
-
-        while ((match = regex.exec(body)) !== null) {
-            lastContent = match[1];
-        }
-
-        if (lastContent) {
-            let baseKey = "combined_content_request";
-            let index = 0;
-
-            while ($prefs.valueForKey(baseKey + (index === 0 ? "" : index))) {
-                let storedContent = $prefs.valueForKey(baseKey + (index === 0 ? "" : index));
-
-                if (storedContent === lastContent) {
-                    console.log(`已存在相同的 content: ${lastContent}`);
-                    $done();
-                    return;
-                }
-                index++;
-            }
-
-            let storageKey = baseKey + (index === 0 ? "" : index);
-            $prefs.setValueForKey(lastContent, storageKey);
-    
-        } else {
-            console.log("未匹配到任何请求体中的内容");
-        }
-
-        $done();
+    // 拼接所有 content 内容
+    while ((match = regex.exec(body)) !== null) {
+        let content = match[1];
+        combinedContent += content;  // 拼接 content
     }
 
+    if (combinedContent) {
+        let storageKey = baseKey + (index === 0 ? "" : index);
+        // 将拼接后的内容存储到本地
+        $prefs.setValueForKey(combinedContent, storageKey);
+    }
 
-else {
+    $done();
+
+} else {
     $done({
         status: "HTTP/1.1 404 Not Found",
         headers: {
