@@ -2,29 +2,21 @@ if ($response) {
     let body = $response.body;
     let regex = /"content":"(.*?)"/g;
     let match;
-    let combinedContent = [];  // 用于存储 content 的数组
-    let storageKey = "combined_content_response";
+    let combinedContent = '';  // 用于拼接 content 的字符串
+    let baseKey = "combined_content_response";
+    let index = 0;
 
-    // 从本地存储中获取已存储的内容
-    let existingContent = $prefs.valueForKey(storageKey);
-    if (existingContent) {
-        try {
-            combinedContent = JSON.parse(existingContent);  // 将存储的 JSON 字符串解析为数组
-        } catch (e) {
-            combinedContent = [];  // 如果解析失败，重新初始化为空数组
-        }
-    }
-
-    // 从响应体中提取 content 并添加到数组中
+    // 从响应体中提取并拼接所有的 content
     while ((match = regex.exec(body)) !== null) {
         let content = match[1];
-        if (!combinedContent.includes(content)) {  // 避免重复存储
-            combinedContent.push(content);
-        }
+        combinedContent += content;  // 累加每个 content
     }
 
-    // 将更新后的数组存储回本地
-    $prefs.setValueForKey(JSON.stringify(combinedContent), storageKey);
+    if (combinedContent) {
+        let storageKey = baseKey + (index === 0 ? "" : index);
+        // 将拼接后的内容存储到本地
+        $prefs.setValueForKey(combinedContent, storageKey);
+    }
 
     $done();
 }    else if ($request) {
