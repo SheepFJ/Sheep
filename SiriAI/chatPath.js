@@ -1,46 +1,24 @@
-if ($response) {
+if ($response) { 
     let body = $response.body;
     let regex = /"content":"(.*?)"/g;
     let match;
+    let combinedContent = '';  // 用于拼接 content 的字符串
     let baseKey = "combined_content_response";
     let index = 0;
 
-    while ($prefs.valueForKey(baseKey + (index === 0 ? "" : index))) {
-        let storedContent = $prefs.valueForKey(baseKey + (index === 0 ? "" : index));
-        if (storedContent) {
-            body = body.replace(`"content":"${storedContent}"`, '');
-        }
-        index++;
-    }
-
-    index = 0;
-    while ($prefs.valueForKey(baseKey + (index === 0 ? "" : index))) {
-        index++;
-    }
-
+    // 从响应体中提取并拼接所有的 content
     while ((match = regex.exec(body)) !== null) {
         let content = match[1];
-        let safeContent = JSON.stringify(content).slice(1, -1);
+        combinedContent += content;  // 累加每个 content
+    }
+
+    if (combinedContent) {
         let storageKey = baseKey + (index === 0 ? "" : index);
-
-        let alreadyStored = false;
-        for (let i = 0; i <= index; i++) {
-            let storedValue = $prefs.valueForKey(baseKey + (i === 0 ? "" : i));
-            if (storedValue === safeContent) {
-                alreadyStored = true;
-                break;
-            }
-        }
-
-        if (!alreadyStored) {
-            $prefs.setValueForKey(safeContent, storageKey);
-            
-            index++;
-        }
+        // 将拼接后的内容存储到本地
+        $prefs.setValueForKey(combinedContent, storageKey);
     }
 
     $done();
-
 }    else if ($request) {
     let body = $request.body;
     let regex = /"content"\s*:\s*"([^"]*)"\s*,\s*"role"\s*:\s*"user"/g;
