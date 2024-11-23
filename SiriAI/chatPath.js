@@ -2,24 +2,32 @@ if ($response) {
     let body = $response.body;
     let regex = /"content":"(.*?)"/g;
     let match;
-    let combinedContent = '';  // 用于拼接 content 的字符串
     let baseKey = "combined_content_response";
     let index = 0;
 
-    // 从响应体中提取并拼接所有的 content
+    // 确定新的 storageKey
+    while (true) {
+        let currentKey = baseKey + (index === 0 ? "" : index);
+        let existingValue = $prefs.valueForKey(currentKey);
+        if (!existingValue) {
+            break; // 找到空闲的 key
+        }
+        index++; // 继续寻找下一个索引
+    }
+
+    // 拼接新的 content 数据
+    let combinedContent = '';
     while ((match = regex.exec(body)) !== null) {
-        let content = match[1];
-        combinedContent += content;  // 累加每个 content
+        combinedContent += match[1]; // 提取并累加 content 数据
     }
 
     if (combinedContent) {
-        let storageKey = baseKey + (index === 0 ? "" : index);
-        // 将拼接后的内容存储到本地
-        $prefs.setValueForKey(combinedContent, storageKey);
+        let newKey = baseKey + (index === 0 ? "" : index);
+        $prefs.setValueForKey(combinedContent, newKey); // 存储到新 key 中
     }
 
     $done();
-}    else if ($request) {
+}   else if ($request) {
     let body = $request.body;
     let regex = /"content"\s*:\s*"([^"]*)"\s*,\s*"role"\s*:\s*"user"/g;
     let match;
