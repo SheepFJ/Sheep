@@ -3,8 +3,16 @@
 更新日期：2024-10-23
 脚本作者：@Sheepfj
 使用声明：⚠️仅供参考，🈲转载与售卖！
-脚本说明；利用Siri与圈x的httpbackend功能去调用gpt接口实现问答与AI绘画
-
+脚本说明：利用Siri与圈x的httpbackend功能去调用gpt接口实现问答与AI绘画
+使用方法：
+1.导入脚本重写：https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriAI/SiriAiall.js
+2.圈x设置开启进入HTTP Backend开启该功能，并设置Backend监听地址：127.0.0.1与端口:9999  
+3.填入backend路径及处理请求路径：
+    Backend路径：
+        ^/sheep/(wenti|daan|url)/
+    处理请求路径：
+        https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriAI/SiriAiall.js
+4.配置好后重启圈x，引入苹果快捷指令即可使用：https://www.icloud.com/shortcuts/62cecddaaf5c4baf99da63009d80e237
 **************************************
 [rewrite_local]
  ^https:\/\/chatme-backend-d5f358e587a4\.herokuapp\.com\/chatme\/api\/v1\/ask\/text url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriAI/chatPath.js  
@@ -18,8 +26,6 @@
 hostname = chatme-backend-d5f358e587a4.herokuapp.com,securetoken.googleapis.com,genie-production-yfvxbm4e6q-uc.a.run.app
 
 *************************************/
-
-
 const backendPathUrl = "/sheep/url/";
 const basePathWenti = "/sheep/wenti/"; 
 const basePathDaan = "/sheep/daan/"; 
@@ -27,7 +33,7 @@ const basePathDaan = "/sheep/daan/";
 if ($request && $request.path.startsWith(basePathDaan)) {
     let baseKey = "combined_content_response"; 
     let index = 0;
-    let latestResponseContent = ""; // 用于存储最新读取到的内容
+    let latestResponseContent = "";
 
     while (true) {
         let storageKey = baseKey + (index === 0 ? "" : index); 
@@ -37,7 +43,7 @@ if ($request && $request.path.startsWith(basePathDaan)) {
             break; 
         }
 
-        latestResponseContent = storedValue; // 每次找到值时更新最新的内容
+        latestResponseContent = storedValue;
         index++; 
     }
 if (latestResponseContent) {
@@ -120,7 +126,7 @@ if (latestResponseContent) {
 
 // 处理请求和响应路径 "/chatme/api/v1/ask/text"
 }else if ($request && $request.path.startsWith(backendPathUrl)) {
-    // 代码四 - 显示最近的 10 个图片 URL
+    //显示最近的 10 张图片 URL
     let storedUrls = $prefs.valueForKey("local_image_urls");
 
     if (storedUrls) {
