@@ -1,3 +1,4 @@
+//实现本地展示10张存储的图片
 // 1. 获取响应体
 let body = $response.body;
 
@@ -44,7 +45,7 @@ if (matchContent) {
 
         // 如果存储的 URL 超过 10 个，移除最早的 URL
         if (existingUrls.length > 10) {
-            existingUrls.shift(); // 移除数组第一个元素（最旧的 URL）
+            existingUrls.shift(); // 移除数组第一个元素
         }
     } else {
         // 如果没有存储的 URL，则初始化一个数组
@@ -56,8 +57,6 @@ if (matchContent) {
     console.log("Successfully saved image URL: " + newUrl);
 } else {
     // 如果既没有 content 也没有 url
-    console.log("Neither content nor URL found.");
+    console.log("没有获取到图片链接");
 }
-
-// 6. 返回原始响应体
 $done({ body });
