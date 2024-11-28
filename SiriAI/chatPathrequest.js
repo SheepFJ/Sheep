@@ -4,9 +4,9 @@ let accessToken = $prefs.valueForKey("local_access_token");
         let headers = $request.headers;
         headers['Authorization'] = `Bearer ${accessToken}`;
 
-        // 修改请求头后，等待响应的到来
+        // 修改请求头后，等待响应
         $done({ headers });
     } else {
-        console.log("Access token not found.");
+        console.log("没有获取到请求头");
         $done({});
     }
