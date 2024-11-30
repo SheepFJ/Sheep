@@ -7,7 +7,7 @@
 使用方法：
 1.导入脚本重写：https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriAI/SiriAiall.js
 2.圈x设置开启进入HTTP Backend开启该功能，并设置Backend监听地址：127.0.0.1与端口:9999  
-3.填入backend路径及处理请求路径：
+3.在HTTP Backend里面右上角点➕填入backend路径及处理请求路径：
     Backend路径：
         ^/sheep/(wenti|daan|url)/
     处理请求路径：
