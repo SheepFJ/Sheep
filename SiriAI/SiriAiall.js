@@ -168,7 +168,7 @@ if (latestResponseContent) {
         <html>
         <body>
         <h1>No URLs Found</h1>
-        <p>No URLs have been stored yet.</p>
+        <p>没有获取到URL链接（对话功能可用的情况下，可能是服务器压力过大，晚些尝试）</p>
         </body>
         </html>
         `;
