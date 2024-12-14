@@ -10,7 +10,7 @@
 **********************************
 
 [rewrite_local]
-^https?:\/\/.*\.pcw365\.com\/(minicad\/api\/auth\/ioslogintoken|ios\/service_use) url script-response-body JS/CADmini.js
+^https?:\/\/.*\.pcw365\.com\/(minicad\/api\/auth\/ioslogintoken|ios\/service_use) url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/cadmini.js
 
 [mitm]
 hostname = *.pcw365.com
