@@ -4,52 +4,59 @@
   "author": "@Sheepfj",
   "icon": "https://avatars.githubusercontent.com/u/125231595?v=4",
   "repo": "https://github.com/SheepFJ/Sheep",
-  "desc": "订阅大多都支持多账号，协定数据格式如下：有主键的用JSON，没有主键的拼接用#分割用@。\n例如{\"uid1\": \"token1\", \"uid2\": \"token2\",\"uid3\": \"token3\"}和uid1#token1@uid2#token2@uid3#token3",
+  "desc": "用于辅助圈X,对脚本传入参数",
   "date": "更新日期：2024-12-18 00:00:00",
   "apps": [{
-      "id": "fmz200_xiaohongshu",
-      "name": "小红书功能增强",
+      "id": "sheep_xiaomishuabushu",
+      "name": "小米运动刷微信步数",
       "keys": [
-        "fmz200.xiaohongshu.imageQuality",
-        "fmz200.xiaohongshu.feed.rsp",
-        "redBookVideoFeed",
-        "redBookVideoFeedUnlock"
+        "sheep_account_xiaomishuabushu",
+        "sheep_password_xiaomishuabushu",
+        "sheep_min_steps_xiaomishuabushu",
+        "sheep_max_steps_xiaomishuabushu"
       ],
       "descs_html": [
-        "可选图片质量，保存无水印图片和视频"
+        "依次填写小米运动的账号，密码，最小步数，最大步数"
       ],
       "settings": [
-        {
-          "id": "fmz200.xiaohongshu.imageQuality",
-          "name": "小红书无水印图片保存质量",
-          "val": "highPixels",
-          "type": "selects",
-          "items": [
-            {
-              "key": "original",
-              "label": "原始分辨率 (图片占用空间大)"
-            },
-            {
-              "key": "highPixels",
-              "label": "高像素输出 (图片占用空间小)"
-            },
-            {
-              "key": "highQuality",
-              "label": "高质量压缩"
-            },
-            {
-              "key": "medium",
-              "label": "平衡配置"
-            }
-          ],
-          "desc": "图片质量可选：原始分辨率PNG，高像素输出HEIF，高质量压缩，平衡配置"
-        }
+        { 
+          "id": "sheep_account_xiaomishuabushu",
+          "name": "小米运动账号",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8,
+          "desc": ""
+        },{ 
+          "id": "sheep_password_xiaomishuabushu",
+          "name": "小米运动密码",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8,
+          "desc": ""
+        },{ 
+          "id": "sheep_min_steps_xiaomishuabushu",
+          "name": "刷的步数最小值",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8,
+          "desc": ""
+        },{ 
+          "id": "sheep_max_steps_xiaomishuabushu",
+          "name": "刷的步数最大值",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8,
+          "desc": ""
+        },
       ],
       "icons": [
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/xiaohongshu.png",
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/xiaohongshu.png"
+        "",
       ],
-      "author": "@fmz200",
-      "repo": "https://github.com/fmz200/wool_scripts"
+      "author": "@Sheepfj",
+      "repo": "https://github.com/SheepFJ/Sheep"
     }
 ]}
