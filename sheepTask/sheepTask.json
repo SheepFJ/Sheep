@@ -2,7 +2,7 @@
   "id": "sheepTask.boxjs",
   "name": "sheepTask@BOXJS",
   "author": "@Sheepfj",
-  "icon": "src="https://avatars.githubusercontent.com/u/125231595?v=4",
+  "icon": "https://avatars.githubusercontent.com/u/125231595?v=4",
   "repo": "https://github.com/SheepFJ/Sheep",
   "desc": "订阅大多都支持多账号，协定数据格式如下：有主键的用JSON，没有主键的拼接用#分割用@。\n例如{\"uid1\": \"token1\", \"uid2\": \"token2\",\"uid3\": \"token3\"}和uid1#token1@uid2#token2@uid3#token3",
   "date": "更新日期：2024-12-18 00:00:00",
