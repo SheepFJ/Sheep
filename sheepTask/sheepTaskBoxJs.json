@@ -1,0 +1,62 @@
+{
+  "id": "sheepTask.boxjs",
+  "name": "sheepTask@BOXJS",
+  "author": "@Sheepfj",
+  "icon": "https://avatars.githubusercontent.com/u/125231595?v=4",
+  "repo": "https://github.com/SheepFJ/Sheep",
+  "desc": "用于辅助圈X,对脚本传入参数",
+  "date": "更新日期：2024-12-18 00:00:00",
+  "apps": [{
+      "id": "sheep_xiaomishuabushu",
+      "name": "小米运动刷微信步数",
+      "keys": [
+        "sheep_account_xiaomishuabushu",
+        "sheep_password_xiaomishuabushu",
+        "sheep_min_steps_xiaomishuabushu",
+        "sheep_max_steps_xiaomishuabushu"
+      ],
+      "descs_html": [
+        "依次填写小米运动的账号，密码，最小步数，最大步数"
+      ],
+      "settings": [
+        { 
+          "id": "sheep_account_xiaomishuabushu",
+          "name": "小米运动账号",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8,
+          "desc": ""
+        },{ 
+          "id": "sheep_password_xiaomishuabushu",
+          "name": "小米运动密码",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8,
+          "desc": ""
+        },{ 
+          "id": "sheep_min_steps_xiaomishuabushu",
+          "name": "刷的步数最小值",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8,
+          "desc": ""
+        },{ 
+          "id": "sheep_max_steps_xiaomishuabushu",
+          "name": "刷的步数最大值",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8,
+          "desc": ""
+        },
+      ],
+      "icons": [
+        "",
+      ],
+      "author": "@Sheepfj",
+      "repo": "https://github.com/SheepFJ/Sheep"
+    }
+]}
