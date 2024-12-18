@@ -25,7 +25,7 @@
           "val": "",
           "type": "textarea",
           "autoGrow": false,
-          "rows": 8,
+          "rows": 2,
           "desc": ""
         },
         { 
@@ -34,7 +34,7 @@
           "val": "",
           "type": "textarea",
           "autoGrow": false,
-          "rows": 8,
+          "rows": 2,
           "desc": ""
         },
         { 
@@ -43,7 +43,7 @@
           "val": "",
           "type": "textarea",
           "autoGrow": false,
-          "rows": 8,
+          "rows": 2,
           "desc": ""
         },
         { 
@@ -52,7 +52,7 @@
           "val": "",
           "type": "textarea",
           "autoGrow": false,
-          "rows": 8,
+          "rows": 2,
           "desc": ""
         }
       ],
