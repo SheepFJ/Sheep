@@ -27,7 +27,8 @@
           "autoGrow": false,
           "rows": 8,
           "desc": ""
-        },{ 
+        },
+        { 
           "id": "sheep_password_xiaomishuabushu",
           "name": "小米运动密码",
           "val": "",
@@ -35,7 +36,8 @@
           "autoGrow": false,
           "rows": 8,
           "desc": ""
-        },{ 
+        },
+        { 
           "id": "sheep_min_steps_xiaomishuabushu",
           "name": "刷的步数最小值",
           "val": "",
@@ -43,7 +45,8 @@
           "autoGrow": false,
           "rows": 8,
           "desc": ""
-        },{ 
+        },
+        { 
           "id": "sheep_max_steps_xiaomishuabushu",
           "name": "刷的步数最大值",
           "val": "",
@@ -51,12 +54,13 @@
           "autoGrow": false,
           "rows": 8,
           "desc": ""
-        },
+        }
       ],
       "icons": [
-        "",
+        ""
       ],
       "author": "@Sheepfj",
       "repo": "https://github.com/SheepFJ/Sheep"
     }
-]}
+  ]
+}
