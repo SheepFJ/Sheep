@@ -57,7 +57,8 @@
         }
       ],
       "icons": [
-        ""
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/xiaomiyundong.png",
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/xiaomiyundong.png"
       ],
       "author": "@Sheepfj",
       "repo": "https://github.com/SheepFJ/Sheep"
