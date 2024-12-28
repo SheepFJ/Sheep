@@ -62,6 +62,34 @@
       ],
       "author": "@Sheepfj",
       "repo": "https://github.com/SheepFJ/Sheep"
+    },
+    {
+      "id": "sheep_pkc_chatgpt4o",
+      "name": "PKC微信助手设定",
+      "keys": [
+        "sheep_pkc_chatgpt4o_data"
+      ],
+      "descs_html": [
+        "对AI助手的设定,不要使用换行符 \n",
+        "默认设定:小羊是一位温和幽默的微信聊天助手，专注陪伴、解答疑问，语言亲切，表现灵活，提供高质量服务。"
+      ],
+      "settings": [
+        { 
+          "id": "sheep_pkc_chatgpt4o_data",
+          "name": "PKC微信助手设定内容",
+          "val": "小羊是一位温和幽默的微信聊天助手，专注陪伴、解答疑问，语言亲切，表现灵活，提供高质量服务。",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4,
+          "desc": "输入设定内容，不要出现换行符"
+        }   
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/chatgpt.png",
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/chatgpt.png"
+      ],
+      "author": "@Sheepfj",
+      "repo": "https://github.com/SheepFJ/Sheep"
     }
   ]
 }
