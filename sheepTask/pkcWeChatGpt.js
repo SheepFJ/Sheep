@@ -3,6 +3,8 @@
 更新日期：2024-12-28
 脚本作者：@Sheepfj
 使用声明：⚠️仅供参考，🈲转载与售卖！
+配合BoxJs修改AI设定，猫娘风，幽默风，由你设置：
+boxjs订阅链接：https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJs.json
 **********************************
 使用教程：
 功能：微信自动回复AI生成的消息
@@ -52,6 +54,7 @@ if (!customContent) {
             'User-Agent': `BackgroundShortcutRunner/1417.1 CFNetwork/1406.0.4 Darwin/22.4.0`,
             'Accept-Language': `en;q=1.0`
         };
+	    //字数不要超过70，否则容易超时
         const body = `{"fuid":"rWuHN9EPIHQwRVVGEUHd4qBX5Sj1","messages":[{"content":"你接下来的所有回答字数必须控制在70字内，你现在是一个微信回复聊天助手,我会对你进行一些个性化的设定","role":"user"},{"content":"好的，很高兴为你服务！你为我提供的个性化设定是什么呢？","role":"assistant"},{"content":"${customContent}","role":"user"},{"content":"了解啦，我会遵循这些设定为你服务！有什么需要我帮忙的吗？","role":"assistant"},{"content":"${parameter}","role":"user"}],"aiModelProvider":"open-ai","language":"EN","subscriptionType":"premium","aiModelVersion":"gpt-4o","user":"A4060097-2A26-4F56-922B-ED9DC946E62B"}`;
 
         const myRequest = {
