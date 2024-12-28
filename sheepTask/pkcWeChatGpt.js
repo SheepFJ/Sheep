@@ -1,3 +1,30 @@
+/*************************************
+项目名称：微信自动回复AI生成的消息
+更新日期：2024-12-28
+脚本作者：@Sheepfj
+使用声明：⚠️仅供参考，🈲转载与售卖！
+**********************************
+使用教程：
+功能：微信自动回复AI生成的消息
+工具：圈x+微信且安装pkc插件(本人使用pkc0.6-6版本，有自动回复与自定义文本Api即可)
+
+配置教程：
+1.圈x配置：Backend监听地址与端口：
+	--地址--：127.0.0.1   --端口--:   9.9.9.9	
+2.圈x配置：填入backend处理请求的路径及脚本路径：
+	处理请求的路径    ^/sheep/pkc/gpt/   
+	脚本路径      https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/pkcWeChatGpt.js     
+
+3.设置微信pkc插件--关键词自动回复：
+	pkc插件中打开关键词自动回复，进入关键词回复设置右上点添加，自动回复文本(必填)中填写      /pkc text 1 [原文]
+
+4.设置微信pkc插件--自定义接口Api：
+	打开自定义文本api，然后进入配置，在API1中填写            	 http://127.0.0.1:9999/sheep/pkc/gpt/[参数1]/
+				     在自定义内容API1中填写	 [content]
+				     （如果打开了文字转语言，在自定义前缀API1中填写    yy  可自动将文字转语音）
+*************************************/
+
+
 const basePathDaan = "/sheep/pkc/gpt/";
 
 if ($request && $request.path.startsWith(basePathDaan)) {
