@@ -30,12 +30,12 @@ boxjs订阅链接：https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/m
 const basePathDaan = "/sheep/pkc/gpt/";
 
 if ($request && $request.path.startsWith(basePathDaan)) {
-    // 提取路径参数
+    // 提取路径参数，解决微信安装了主题的用户错误问题
     let parameter = $request.path
     .slice(basePathDaan.length)
-    .replace(/\/$/, "")        // 去掉结尾的 "/"
-    .replace(/%0A/gi, "")      // 替换 URL 编码形式的换行符
-    .replace(/%0D/gi, "");     // 可选：替换回车符编码（%0D，CR）
+    .replace(/\/$/, "")        
+    .replace(/%0A/gi, "")      
+    .replace(/%0D/gi, "");     
 
 parameter = decodeURIComponent(parameter) // 解码 URL 编码
     .replace(/\r?\n/g, "");               // 替换解码后的实际换行符// 将 %0a 换行符替换为空字符串
