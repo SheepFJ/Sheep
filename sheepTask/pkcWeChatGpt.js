@@ -33,7 +33,7 @@ if ($request && $request.path.startsWith(basePathDaan)) {
     // 提取路径参数
     let parameter = decodeURIComponent(
     $request.path.slice(basePathDaan.length).replace(/\/$/, "")
-).replace(/%0a/g, ""); // 将 %0a 换行符替换为空字符串
+).replace(/%0A/g, ""); // 将 %0a 换行符替换为空字符串
 
     let customContent = $prefs.valueForKey('sheep_pkc_chatgpt4o_data');
 
