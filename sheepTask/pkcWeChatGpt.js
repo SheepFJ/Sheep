@@ -31,9 +31,14 @@ const basePathDaan = "/sheep/pkc/gpt/";
 
 if ($request && $request.path.startsWith(basePathDaan)) {
     // 提取路径参数
-    let parameter = decodeURIComponent(
-    $request.path.slice(basePathDaan.length).replace(/\/$/, "")
-).replace(/%0A/g, ""); // 将 %0a 换行符替换为空字符串
+    let parameter = $request.path
+    .slice(basePathDaan.length)
+    .replace(/\/$/, "")        // 去掉结尾的 "/"
+    .replace(/%0A/gi, "")      // 替换 URL 编码形式的换行符
+    .replace(/%0D/gi, "");     // 可选：替换回车符编码（%0D，CR）
+
+parameter = decodeURIComponent(parameter) // 解码 URL 编码
+    .replace(/\r?\n/g, "");               // 替换解码后的实际换行符// 将 %0a 换行符替换为空字符串
 
     let customContent = $prefs.valueForKey('sheep_pkc_chatgpt4o_data');
 
