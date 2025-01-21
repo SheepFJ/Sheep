@@ -98,16 +98,18 @@
         "sheep_sql_data01",
         "sheep_sql_data02",
         "sheep_sql_data03",
-        "sheep_sql_data04",
         "sheep_sql_delect01"
       ],
       "descs_html": [
-        "使用如下形式定义字段: name_,age_,gender_,join_,money_,time_ \n"
+        "使用如下形式定义字段: name_,age_,gender_,join_,money_,time_ \n",
+        "<a href="http:127.0.0.1:9999/sheep/sql/data/sheep_sql_data01/" style="text-decoration: none;">查看slq项目1数据</a> \n",
+        "<a href="http:127.0.0.1:9999/sheep/sql/data/sheep_sql_data02/" style="text-decoration: none;">查看slq项目2数据</a> \n",
+        "<a href="http:127.0.0.1:9999/sheep/sql/data/sheep_sql_data03/" style="text-decoration: none;">查看slq项目3数据</a> \n"
       ],
       "settings": [
         {
           "id": "sheep_sql_delect01",
-          "name": "sql项目数据删除",
+          "name": "🍉sql项目数据删除🍉",
           "val": "name_,age_,'gender_,join_,money_,time_",
           "type": "textarea",
           "autoGrow": true,
@@ -116,17 +118,35 @@
         },
         {
           "id": "sheep_sql_data01",
-          "name": "sql项目1",
+          "name": "1️⃣sql项目1",
           "val": "name_,age_,'gender_,join_,money_,time_",
           "type": "textarea",
           "autoGrow": true,
           "rows": 1,
-          "desc": "输入字段内容:字段名_"
+          "desc": "输入字段内容:字段名_  使用,隔开"
+        },
+        {
+          "id": "sheep_sql_data02",
+          "name": "2️⃣sql项目2",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "desc": "输入字段内容:字段名_  使用,隔开"
+        },
+        {
+          "id": "sheep_sql_data03",
+          "name": "3️⃣sql项目3",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "desc": "输入字段内容:字段名_  使用,隔开"
         }
       ],
       "icons": [
-        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/chatgpt.png",
-        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/chatgpt.png"
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/sql.png",
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/sql.png"
       ],
       "author": "@Sheepfj",
       "repo": "https://github.com/SheepFJ/Sheep",
