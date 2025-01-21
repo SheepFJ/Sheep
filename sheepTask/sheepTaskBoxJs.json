@@ -100,11 +100,11 @@
         "sheep_sql_data03",
         "sheep_sql_delect01"
       ],
-      "descs_html": [
+      "descs_html":[
         "使用如下形式定义字段: name_,age_,gender_,join_,money_,time_ \n",
-        "<a href="http:127.0.0.1:9999/sheep/sql/data/sheep_sql_data01/" style="text-decoration: none;">查看slq项目1数据</a> \n",
-        "<a href="http:127.0.0.1:9999/sheep/sql/data/sheep_sql_data02/" style="text-decoration: none;">查看slq项目2数据</a> \n",
-        "<a href="http:127.0.0.1:9999/sheep/sql/data/sheep_sql_data03/" style="text-decoration: none;">查看slq项目3数据</a> \n"
+        "<a href=\"http:127.0.0.1:9999/sheep/sql/data/sheep_sql_data01/\" style=\"text-decoration: none;\">查看slq项目1数据</a> \n",
+        "<a href=\"http:127.0.0.1:9999/sheep/sql/data/sheep_sql_data02/\" style=\"text-decoration: none;\">查看slq项目2数据</a> \n",
+        "<a href=\"http:127.0.0.1:9999/sheep/sql/data/sheep_sql_data03/\" style=\"text-decoration: none;\">查看slq项目3数据</a> \n"
       ],
       "settings": [
         {
