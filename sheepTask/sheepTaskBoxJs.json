@@ -98,12 +98,22 @@
         "sheep_sql_data01",
         "sheep_sql_data02",
         "sheep_sql_data03",
-        "sheep_sql_data04"
+        "sheep_sql_data04",
+        "sheep_sql_delect01"
       ],
       "descs_html": [
         "使用如下形式定义字段: name_,age_,gender_,join_,money_,time_ \n"
       ],
       "settings": [
+        {
+          "id": "sheep_sql_delect01",
+          "name": "sql项目数据删除",
+          "val": "name_,age_,'gender_,join_,money_,time_",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "desc": "使用英文","分割开要删除的数据列，如:name_,age_"
+        },
         {
           "id": "sheep_sql_data01",
           "name": "sql项目1",
@@ -120,6 +130,12 @@
       ],
       "author": "@Sheepfj",
       "repo": "https://github.com/SheepFJ/Sheep"
+      "scripts": [
+            {
+                "name": "删除“sql项目数据删除”中定义的数据列",
+                "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJsPlay/sheep_sql_delect01.js"
+            }
+        ]
     }
   ]
 }
