@@ -90,6 +90,36 @@
       ],
       "author": "@Sheepfj",
       "repo": "https://github.com/SheepFJ/Sheep"
+    },
+      {
+      "id": "sheep_sql_data",
+      "name": "模拟一个简易数据库存储功能",
+      "keys": [
+        "sheep_sql_data01",
+        "sheep_sql_data02",
+        "sheep_sql_data03",
+        "sheep_sql_data04"
+      ],
+      "descs_html": [
+        "使用列表格式定义字段['name_', 'age_', 'gender_', 'join_', 'money_', 'time_'] \n"
+      ],
+      "settings": [
+        {
+          "id": "sheep_sql_data01",
+          "name": "sql项目1",
+          "val": "['name_', 'age_', 'gender_', 'join_', 'money_', 'time_']",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 3,
+          "desc": "输入字段内容:字段名_"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/chatgpt.png",
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/chatgpt.png"
+      ],
+      "author": "@Sheepfj",
+      "repo": "https://github.com/SheepFJ/Sheep"
     }
   ]
 }
