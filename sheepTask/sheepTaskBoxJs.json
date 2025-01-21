@@ -129,7 +129,7 @@
         "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/chatgpt.png"
       ],
       "author": "@Sheepfj",
-      "repo": "https://github.com/SheepFJ/Sheep"
+      "repo": "https://github.com/SheepFJ/Sheep",
       "scripts": [
             {
                 "name": "删除“sql项目数据删除”中定义的数据列",
