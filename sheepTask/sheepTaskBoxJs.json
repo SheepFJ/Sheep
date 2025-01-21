@@ -101,16 +101,16 @@
         "sheep_sql_data04"
       ],
       "descs_html": [
-        "使用列表格式定义字段['name_', 'age_', 'gender_', 'join_', 'money_', 'time_'] \n"
+        "使用如下形式定义字段: name_,age_,gender_,join_,money_,time_ \n"
       ],
       "settings": [
         {
           "id": "sheep_sql_data01",
           "name": "sql项目1",
-          "val": "['name_', 'age_', 'gender_', 'join_', 'money_', 'time_']",
+          "val": "name_,age_,'gender_,join_,money_,time_",
           "type": "textarea",
-          "autoGrow": false,
-          "rows": 3,
+          "autoGrow": true,
+          "rows": 1,
           "desc": "输入字段内容:字段名_"
         }
       ],
