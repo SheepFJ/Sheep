@@ -112,7 +112,7 @@
           "type": "textarea",
           "autoGrow": true,
           "rows": 1,
-          "desc": "使用英文","分割开要删除的数据列，如:name_,age_"
+          "desc": "使用英文,分割开要删除的数据列，如:name_,age_"
         },
         {
           "id": "sheep_sql_data01",
