@@ -93,11 +93,10 @@
     },
       {
       "id": "sheep_sql_data",
-      "name": "模拟一个简易数据库存储功能",
+      "name": "数据存储",
       "keys": [
         "sheep_sql_data01",
-        "sheep_sql_data02",
-        "sheep_sql_data03",
+        "sheep_sql_getkey01",
         "sheep_sql_delect01"
       ],
       "descs_html":[
@@ -108,41 +107,32 @@
       ],
       "settings": [
         {
-          "id": "sheep_sql_delect01",
-          "name": "🍉sql项目数据删除🍉",
-          "val": "name_,age_,'gender_,join_,money_,time_",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 1,
-          "desc": "使用英文,分割开要删除的数据列，如:name_,age_"
-        },
-        {
           "id": "sheep_sql_data01",
-          "name": "1️⃣sql项目1",
+          "name": "🍍sql自定键🍍",
           "val": "name_,age_,'gender_,join_,money_,time_",
           "type": "textarea",
           "autoGrow": true,
           "rows": 1,
-          "desc": "输入字段内容:字段名_  使用,隔开"
+          "desc": "输入字段内容:字段名_  使用,隔开,与json键值数目对应"
         },
         {
-          "id": "sheep_sql_data02",
-          "name": "2️⃣sql项目2",
+          "id": "sheep_sql_getkey01",
+          "name": "🍎json键值🍎",
           "val": "",
           "type": "textarea",
           "autoGrow": true,
           "rows": 1,
-          "desc": "输入字段内容:字段名_  使用,隔开"
+          "desc": "获取对应json响应数据，此处填写键名,键值会对应赋值给sql自定键"
         },
         {
-          "id": "sheep_sql_data03",
-          "name": "3️⃣sql项目3",
-          "val": "",
+          "id": "sheep_sql_delect01",
+          "name": "🍉数据删除🍉",
+          "val": "name_,age_,'gender_,join_,money_,time_",
           "type": "textarea",
           "autoGrow": true,
           "rows": 1,
-          "desc": "输入字段内容:字段名_  使用,隔开"
-        }
+          "desc": "使用英文,分割开要删除的数据列，如:name_,age_(填写sql自定键名)"
+        }   
       ],
       "icons": [
         "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/sql.png",
