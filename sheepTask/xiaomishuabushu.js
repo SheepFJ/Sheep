@@ -35,6 +35,6 @@ $task.fetch(myRequest).then(response => {
     $done();
 }, reason => {
     // 请求出错时显示通知
-    $notify("步数提交失败","", `请求出错，可能需要重新运行：https://api.sheeptask.com/xiaomishuabushu/你的账号/你的密码/最小步数/最大步数/`);
+    $notify("步数提交失败","", `请配置boxjs数据后手动执行`);
     $done();
 });
