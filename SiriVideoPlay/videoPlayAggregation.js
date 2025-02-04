@@ -1,3 +1,26 @@
+/*************************************
+项目名称：siriVideoPlay
+更新日期：2025-02-04
+脚本作者：Sheep
+使用声明：⚠️仅供参考，🈲转载与售卖！
+脚本说明；利用Siri与圈x的httpbackend功能实现网页在线观看视频
+
+**************************************
+
+[rewrite_local]
+^https:\/\/collect\.wolongzyw\.com\/api\.php\/provide\/vod url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/SiriAI.js  
+ 
+
+[mitm]
+hostname = chatme-backend-d5f358e587a4.herokuapp.com,securetoken.googleapis.com,genie-production-yfvxbm4e6q-uc.a.run.app
+
+*************************************/
+
+
+
+
+
+
 let body = $response.body;
 let json = JSON.parse(body);
 
