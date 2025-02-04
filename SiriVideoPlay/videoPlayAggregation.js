@@ -9,11 +9,11 @@
 2.圈x设置进入HTTP Backend（右上角第二个）开启该功能，并设置Backend监听地址（右上角第一个）：127.0.0.1与端口:9999  
 3.在HTTP Backend里面（右上角第三个）点➕填入backend路径及处理请求路径即可：
     Backend路径：
-        ^/sheep/video/play/
+        ^/sheep/video/(play|play01)/
     处理请求路径：
-        https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayHttpBE.js
-4.配置好后重启圈x，引入苹果快捷指令即可使用：https://www.icloud.com/shortcuts/4ace7e40ba7d40f4958c6342f22b347c
-5.(可选）订阅BoxJS设置最大检索网站数(默认2），以及清理影视列表：https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJs.json
+        https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayHttpBackEnd.js
+4.配置好后重启圈x,浏览器访问如下链接正式使用：http://127.0.0.1:9999/sheep/video/play01/
+5.(可选）订阅BoxJS设置最大检索网站数(默认3），以及清理影视列表：https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJs.json
 
 **************************************
 
