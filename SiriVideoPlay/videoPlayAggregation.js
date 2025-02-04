@@ -4,6 +4,16 @@
 脚本作者：Sheep
 使用声明：⚠️仅供参考，🈲转载与售卖！
 脚本说明；利用Siri与圈x的httpbackend功能实现网页在线观看视频
+使用方法：
+1.导入脚本重写：https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayAggregation.js
+2.圈x设置进入HTTP Backend（右上角第二个）开启该功能，并设置Backend监听地址（右上角第一个）：127.0.0.1与端口:9999  
+3.在HTTP Backend里面（右上角第三个）点➕填入backend路径及处理请求路径即可：
+    Backend路径：
+        ^/sheep/video/play/
+    处理请求路径：
+        https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayHttpBE.js
+4.配置好后重启圈x，引入苹果快捷指令即可使用：https://www.icloud.com/shortcuts/4ace7e40ba7d40f4958c6342f22b347c
+5.(可选）订阅BoxJS设置最大检索网站数(默认2），以及清理影视列表：https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJs.json
 
 **************************************
 
@@ -18,11 +28,6 @@
 hostname = collect.wolongzyw.com,caiji.moduapi.cc,cj.lziapi.com,p2100.net
 
 *************************************/
-
-
-
-
-
 
 let body = $response.body;
 let json = JSON.parse(body);
