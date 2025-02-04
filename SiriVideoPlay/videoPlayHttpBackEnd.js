@@ -41,8 +41,7 @@ if ($request.url.includes(path1)) {
             padding: 20px; max-width: 800px; margin: auto; 
             background: rgba(0, 0, 0, 0.7); border-radius: 10px; 
             box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-border-radius: 0px;
-
+            border-radius: 0px;
         }
         input, button { 
             margin: 10px; padding: 12px; font-size: 18px; border-radius: 8px; border: none; outline: none;
@@ -78,19 +77,15 @@ border-radius: 0px;
     <!-- 搜索框 -->
     <div class="container" id="searchContainer">
         <h2>搜索视频</h2>
-        <label><input type="checkbox" value="https://caiji.moduapi.cc/api.php/provide/vod?ac=detail&wd="> 魔都资源</label>
-
-        <label><input type="checkbox" value="https://p2100.net/api.php/provide/vod?ac=detail&wd="> 飘零资源</label>
-
-<label><input type="checkbox" value="https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/?ac=detail&wd="> 量子资源</label>
-
-<label><input type="checkbox" value="https://collect.wolongzyw.com/api.php/provide/vod?ac=detail&wd="> 卧龙资源</label>
-
+        <label><input type="checkbox" value="https://caiji.moduapi.cc/api.php/provide/vod?ac=detail&wd=" checked> 魔都资源</label>
+        <label><input type="checkbox" value="https://p2100.net/api.php/provide/vod?ac=detail&wd=" checked> 飘零资源</label>
+        <label><input type="checkbox" value="https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/?ac=detail&wd=" checked> 量子资源</label>
+        <label><input type="checkbox" value="https://collect.wolongzyw.com/api.php/provide/vod?ac=detail&wd="> 卧龙资源</label>
 
         <input type="text" id="searchInput" placeholder="输入搜索内容">
         <button onclick="search()">搜索</button>
         <div id="results"></div>
-<p>默认最多同时选择3个，配合BoxJS进行修改，同时重置剧集列表</p>
+        <p>默认最多同时选择3个，配合BoxJS进行修改，同时重置剧集列表</p>
     </div>
 
     <script>
