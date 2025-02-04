@@ -34,7 +34,7 @@ let json = JSON.parse(body);
 
 if (json.code === 1 && json.list?.length > 0) {
     let count = parseInt($prefs.valueForKey("vod_count") || "0", 10) + 1;
-    let maxCount = parseInt($prefs.valueForKey("sheep_video_play_process") || "2", 10); // 获取最大存储次数，默认 2
+    let maxCount = parseInt($prefs.valueForKey("sheep_video_play_process") || "3", 10); // 获取最大存储次数，默认3
 
     console.log(`当前存储计数: ${count}, 检索的阈值: ${maxCount}`);
 
