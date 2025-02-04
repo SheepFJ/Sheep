@@ -8,11 +8,14 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/collect\.wolongzyw\.com\/api\.php\/provide\/vod url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/main/SiriAI.js  
- 
+^https:\/\/collect\.wolongzyw\.com\/api\.php\/provide\/vod url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayAggregation.js 
+^https:\/\/caiji\.moduapi\.cc\/api\.php\/provide\/vod url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayAggregation.js 
+^https:\/\/cj\.lziapi\.com/api\.php\/provide\/vod\/from\/ url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayAggregation.js 
+^https:\/\/p2100\.net/api\.php\/provide\/vod url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayAggregation.js 
+
 
 [mitm]
-hostname = chatme-backend-d5f358e587a4.herokuapp.com,securetoken.googleapis.com,genie-production-yfvxbm4e6q-uc.a.run.app
+hostname = collect.wolongzyw.com,caiji.moduapi.cc,cj.lziapi.com,p2100.net
 
 *************************************/
 
