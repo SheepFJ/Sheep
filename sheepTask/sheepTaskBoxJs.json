@@ -6,7 +6,8 @@
   "repo": "https://github.com/SheepFJ/Sheep",
   "desc": "用于辅助圈X,对脚本传入参数",
   "date": "更新日期：2024-12-18 00:00:00",
-  "apps": [{
+  "apps": [
+    {
       "id": "sheep_xiaomishuabushu",
       "name": "小米运动刷微信步数",
       "keys": [
@@ -19,7 +20,7 @@
         "依次填写小米运动的账号，密码，最小步数，最大步数"
       ],
       "settings": [
-        { 
+        {
           "id": "sheep_account_xiaomishuabushu",
           "name": "小米运动账号",
           "val": "",
@@ -28,7 +29,7 @@
           "rows": 1,
           "desc": ""
         },
-        { 
+        {
           "id": "sheep_password_xiaomishuabushu",
           "name": "小米运动密码",
           "val": "",
@@ -37,7 +38,7 @@
           "rows": 1,
           "desc": ""
         },
-        { 
+        {
           "id": "sheep_min_steps_xiaomishuabushu",
           "name": "刷的步数最小值",
           "val": "",
@@ -46,7 +47,7 @@
           "rows": 1,
           "desc": ""
         },
-        { 
+        {
           "id": "sheep_max_steps_xiaomishuabushu",
           "name": "刷的步数最大值",
           "val": "",
@@ -74,7 +75,7 @@
         "默认设定:小羊是一位温和幽默的微信聊天助手，专注陪伴、解答疑问，语言亲切，表现灵活，提供高质量服务。"
       ],
       "settings": [
-        { 
+        {
           "id": "sheep_pkc_chatgpt4o_data",
           "name": "PKC微信助手设定内容",
           "val": "小羊是一位温和幽默的微信聊天助手，专注陪伴、解答疑问，语言亲切，表现灵活，提供高质量服务。",
@@ -82,7 +83,7 @@
           "autoGrow": false,
           "rows": 7,
           "desc": "输入设定内容，不要出现换行符"
-        }   
+        }
       ],
       "icons": [
         "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/chatgpt.png",
@@ -91,7 +92,7 @@
       "author": "@Sheepfj",
       "repo": "https://github.com/SheepFJ/Sheep"
     },
-      {
+    {
       "id": "sheep_sql_data",
       "name": "数据存储",
       "keys": [
@@ -99,7 +100,7 @@
         "sheep_sql_getkey01",
         "sheep_sql_delect01"
       ],
-      "descs_html":[
+      "descs_html": [
         "使用如下形式定义字段: name_,age_,gender_,join_,money_,time_ \n",
         "<a href=\"http://127.0.0.1:9999/sheep/sql/data/sheep_sql_data01/\" style=\"text-decoration: none;\">查看sql自定键数据</a> \n"
       ],
@@ -130,7 +131,7 @@
           "autoGrow": true,
           "rows": 1,
           "desc": "使用英文,分割开要删除的数据列，如:name_,age_(填写sql自定键名)"
-        }   
+        }
       ],
       "icons": [
         "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/sql.png",
@@ -139,11 +140,63 @@
       "author": "@Sheepfj",
       "repo": "https://github.com/SheepFJ/Sheep",
       "scripts": [
+        {
+          "name": "删除“sql项目数据删除”中定义的数据列",
+          "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJsPlay/sheep_sql_delect01.js"
+        }
+      ]
+    },
+    {
+      "id": "sheep_video_play",
+      "name": "影视聚合",
+      "keys": [
+        "sheep_video_play_process"
+      ],
+      "descs_html": [
+        "设置最大检索资源网站数 \n",
+        "默认为2,选择为几运行Siri快捷指令时最多可选择几个资源网站"
+      ],
+      "settings": [
+        {
+          "id": "sheep_video_play_process",
+          "name": "最大检索数",
+          "val": "2",
+          "type": "selects",
+          "items": [
             {
-                "name": "删除“sql项目数据删除”中定义的数据列",
-                "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJsPlay/sheep_sql_delect01.js"
+              "key": "1",
+              "label": "同时检索1个"
+            },
+            {
+              "key": "2",
+              "label": "同时检索2个"
+            },
+            {
+              "key": "3",
+              "label": "同时检索3个"
+            },
+            {
+              "key": "4",
+              "label": "同时检索4个"
             }
-        ]
+          ],
+          "autoGrow": false,
+          "rows": 1,
+          "desc": "默认为2"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/videoplay.png",
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/videoplay.png"
+      ],
+      "author": "@Sheepfj",
+      "repo": "https://github.com/SheepFJ/Sheep",
+      "scripts": [
+        {
+          "name": "删除影视列表所有记录",
+          "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayListClear.js"
+        }
+      ]
     }
   ]
 }
