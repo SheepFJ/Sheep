@@ -1,3 +1,5 @@
+> 加入Telegram交流群 [Sheep交流反馈](https://t.me/sheep_007_xiaoyang).
+> 关注Telegram通知群[Sheep资源备份分享](https://t.me/sheep_007xiaoyang).
 圈x 脚本
 ====
 
@@ -7,17 +9,3 @@
 System.out.println("Hello to see U!");
 </code></pre>
 </details>
-
-
-> 加入Telegram交流群 [Sheep交流反馈](https://t.me/sheep_007_xiaoyang).
-> 关注Telegram通知群[Sheep资源备份分享](https://t.me/sheep_007xiaoyang).
-
-```javascript
-const name = "Tom"
-```
-
-|ta|tb|tc|
-|-|-|-|
-|-|-|-|
-|-|-|-|
-|-|-|-|
