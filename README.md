@@ -29,7 +29,8 @@ boxjs订阅链接：`https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/
 
 
 <details>
-<summary>:trophy:声明</summary>
+  <summary>:trophy:声明</summary>
+  
 ## :construction:免责声明：
 
 * 本项目中的所有解锁与解密分析脚本仅供资源共享与学习交流之用，不对其合法性、准确性、完整性和有效性作任何保证，请用户自行评估和判断。
