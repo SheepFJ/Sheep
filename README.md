@@ -1,4 +1,4 @@
-# 欢迎加入😊
+# 欢迎加入 :hearts:
 > 加入Telegram交流群 [Sheep交流反馈](https://t.me/sheep_007_xiaoyang).  
 > 关注Telegram通知群[Sheep资源备份分享](https://t.me/sheep_007xiaoyang).
 
@@ -7,7 +7,7 @@
 <details>
   <summary>:zap:圈x+PKC微信自动回复</summary>
  
-## 使用方法
+### 使用方法
 
 **1**. QuantumultX设置开启进入HTTP Backend(右上角第二个)开启该功能，并设置(右上角第一个):    
 监听地址:`127.0.0.1`  
@@ -26,12 +26,12 @@ pkc插件中打开关键词自动回复，进入关键词回复设置右上点�
 
 </details>
 
-
+# 免责声明 :book:
 
 <details>
   <summary>:trophy:声明</summary>
   
-## :construction:免责声明：
+### :construction:免责声明：
 
 * 本项目中的所有解锁与解密分析脚本仅供资源共享与学习交流之用，不对其合法性、准确性、完整性和有效性作任何保证，请用户自行评估和判断。
 
