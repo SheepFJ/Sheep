@@ -7,7 +7,7 @@
 <summary>:zap:圈x+PKC微信自动回复</summary>
 ### 使用方法
  
-1. QuantumultX设置开启进入HTTP Backend(右上角第二个)开启该功能，并设置(右上角第一个):<br\>
+1. QuantumultX设置开启进入HTTP Backend(右上角第二个)开启该功能，并设置(右上角第一个):   
 监听地址:`127.0.0.1`  
 端口:`9999`
 2.在HTTP Backend里面(右上角第三个)➕填入[backend]处理请求路径与脚本路径:  
