@@ -1,10 +1,19 @@
-# 欢迎加入:blush:
+# 欢迎加入😊
 > 加入Telegram交流群 [Sheep交流反馈](https://t.me/sheep_007_xiaoyang).  
 > 关注Telegram通知群[Sheep资源备份分享](https://t.me/sheep_007xiaoyang).
 
 
 <details>
 <summary>:zap:圈x+PKC微信自动回复</summary>
+ 1. QuantumultX设置开启进入HTTP Backend(右上角第二个)开启该功能，并设置(右上角第一个):  
+监听地址:`127.0.0.1`  
+端口:`9999`
+2.在HTTP Backend里面(右上角第三个)➕填入[backend]处理请求路径与脚本路径:  
+处理请求路径: `^/sheep/pkc/gpt/`  
+脚本路径: [长按复制]{https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/pkcWeChatGpt.js}  
+3.设置微信pkc插件--关键词自动回复:  
+pkc插件中打开关键词自动回复，进入关键词回复设置右上点添加，自动回复文本(必填)中填写`/pkc text 1 [原文]`
+
 
 </details>
 
