@@ -20,7 +20,7 @@ pkc插件中打开关键词自动回复，进入关键词回复设置右上点�
 打开自定义文本api，然后进入配置，在API1(与第三步text 1对应第一个)中填写`http://127.0.0.1:9999/sheep/pkc/gpt/[参数1]/`在自定义内容API1中填写`[content]`    
 （如果打开了文字转语言,在自定义前缀API1中填写`yy`可自动将文字转语音）    
 **5**.配合BoxJs([怎么使用BoxJS](https://t.me/sheep_007xiaoyang))修改AI设定，猫娘风，幽默风，由你设置:    
-boxjs订阅链接：`https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJs.json`    
+boxjs订阅链接：[长按复制](https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJs.json)      
 
 
 
