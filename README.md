@@ -30,6 +30,9 @@ pkc插件中打开关键词自动回复，进入关键词回复设置右上点�
   <summary>:zap:圈x & 网页影视聚合</summary>
  
 ### 使用方法
+**[获取帮助](https://t.me/sheep_007_xiaoyang)**  
+**1:导入圈x脚本重写** [长按复制](https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayAggregation.js)  
+**2:访问网页即可使用** [点击跳转](https://movies.disney.com/sheep/video/search/)
 
 
 
