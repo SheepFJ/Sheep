@@ -17,8 +17,8 @@
 ^https:\/\/cj\.lziapi\.com/api\.php\/provide\/vod\/from\/ url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayAggregation.js 
 ^https:\/\/p2100\.net/api\.php\/provide\/vod url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayAggregation.js 
 
-^https://www\.video\.com/sheep/video/search/ url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlay001.js
-^https://www\.video\.com/sheep/video/play/ url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlay002.js
+^https://movies\.disney\.com/sheep/video/search/ url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlay001.js
+^https://movies\.disney\.com/sheep/video/play/ url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlay002.js
 [mitm]
 hostname = collect.wolongzyw.com,caiji.moduapi.cc,cj.lziapi.com,p2100.net,movies.disney.com
 
