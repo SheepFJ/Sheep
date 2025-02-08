@@ -6,7 +6,7 @@
 脚本说明；利用Siri与圈x的httpbackend功能实现网页在线观看视频
 使用方法：
 1.导入脚本重写：https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayAggregation.js
-2.配置好后重启圈x,浏览器访问如下链接正式使用：https://www.video.com/sheep/video/search/
+2.配置好后重启圈x,浏览器访问如下链接正式使用：https://movies.disney.com/sheep/video/search/
 3.(可选）订阅BoxJS设置最大检索网站数(默认3），以及清理影视列表：https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJs.json
 
 **************************************
@@ -20,7 +20,7 @@
 ^https://www\.video\.com/sheep/video/search/ url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlay001.js
 ^https://www\.video\.com/sheep/video/play/ url script-response-body https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlay002.js
 [mitm]
-hostname = collect.wolongzyw.com,caiji.moduapi.cc,cj.lziapi.com,p2100.net,www.video.com
+hostname = collect.wolongzyw.com,caiji.moduapi.cc,cj.lziapi.com,p2100.net,movies.disney.com
 
 *************************************/
 
