@@ -9,7 +9,8 @@
  
 ### 使用方法
 
-**![效果如下](https://www.helloimg.com/i/2025/02/08/67a735a6a3b9d.jpeg)  
+**效果如下**  
+![效果如下](https://www.helloimg.com/i/2025/02/08/67a735a6a3b9d.jpeg)  
 
 **1**. QuantumultX设置开启进入HTTP Backend(右上角第二个)开启该功能，并设置(右上角第一个):    
 监听地址:`127.0.0.1`  
