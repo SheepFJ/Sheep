@@ -147,11 +147,11 @@
       "scripts": [
         {
           "name": "手动删除用户记录",
-          "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJsPlay/sheep_sql_delect01.js"
+          "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepWeChatPKC/sheepwechacheck.js"
         },
         {
           "name": "查询目前所有聊天信息",
-          "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJsPlay/sheep_sql_delect01.js"
+          "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepWeChatPKC/sheepwechatdelect.js"
         }
         
       ]
