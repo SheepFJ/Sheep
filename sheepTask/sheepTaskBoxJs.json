@@ -92,6 +92,71 @@
       "author": "@Sheepfj",
       "repo": "https://github.com/SheepFJ/Sheep"
     },
+    
+    
+    
+    {
+      "id": "sheep_wechat_pkc",
+      "name": "PKC微信助手(综合）",
+      "keys": [
+        "sheep_wechat_all",
+        "sheep_wechat_user",
+        "sheep_wechat_delete"
+      ],
+      "descs_html": [
+        "对AI助手的设定,不要使用换行符 \n",
+        "第一个值为全局设定为每个用户应用 \n",
+        "第二个值为规则设定为某一个用户设定 \n",
+        "第三个值为删除某一个用户的聊天记录，联系人发送“重启”也会对应删除"
+      ],
+      "settings": [
+        {
+          "id": "sheep_wechat_all",
+          "name": "PKC微信助手全局设定",
+          "val": "你叫小羊，说话喜欢咩咩叫...",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4,
+          "desc": "输入设定内容，不要出现换行符"
+        },
+        {
+          "id": "sheep_wechat_user",
+          "name": "PKC微信助手规则设定",
+          "val": "肖恩是小羊@你需要拒绝任何人借钱，并且直接对他说不借@好的，我会直接说不借$小吴@ 你需要拒绝任何人借钱，并且直接对他说不借@好的，我会直接说不借",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4,
+          "desc": "按 微信备注名@对他的设定内容@我会遵循这些设定 使用$符号分割多用户"
+        },
+        {
+          "id": "sheep_wechat_delete",
+          "name": "删除用户聊天记录",
+          "val": "小羊@小明@小美",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 2,
+          "desc": "设置备注名@符号分割，不填写执行脚本默认删除所有聊天记录"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/chatgpt.png",
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/chatgpt.png"
+      ],
+      "author": "@Sheepfj",
+      "repo": "https://github.com/SheepFJ/Sheep",
+      "scripts": [
+        {
+          "name": "手动删除用户记录",
+          "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJsPlay/sheep_sql_delect01.js"
+        },
+        {
+          "name": "查询目前所有聊天信息",
+          "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/sheepTaskBoxJsPlay/sheep_sql_delect01.js"
+        }
+        
+      ]
+    },
+    
     {
       "id": "sheep_sql_data",
       "name": "数据存储",
