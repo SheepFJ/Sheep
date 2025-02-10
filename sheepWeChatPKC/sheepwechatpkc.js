@@ -22,6 +22,181 @@ hostname = movies.disney.com
 */
 
 
+const url = $request.url;
+const pattern = /^https:\/\/movies\.disney\.com\/sheep\/video\/gpt\/([^\/]+)\/([^\/]+)\/?/;
 
+// **无效请求，返回 404**
+if (!pattern.test(url)) {
+    return $done({
+        status: isLoon ? 404 : "HTTP/1.1 404 Not Found",
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+        body: "Not Found"
+    });
+}
 
-const _0x5d7236=_0x114d;(function(_0xaae64c,_0x5ec5d9){const _0x55cf00=_0x114d,_0x502169=_0xaae64c();while(!![]){try{const _0x3f05a0=parseInt(_0x55cf00(0x1b1))/0x1+parseInt(_0x55cf00(0x1ad))/0x2+-parseInt(_0x55cf00(0x186))/0x3+-parseInt(_0x55cf00(0x1a5))/0x4+parseInt(_0x55cf00(0x1c6))/0x5+-parseInt(_0x55cf00(0x182))/0x6*(-parseInt(_0x55cf00(0x1b3))/0x7)+-parseInt(_0x55cf00(0x190))/0x8;if(_0x3f05a0===_0x5ec5d9)break;else _0x502169['push'](_0x502169['shift']());}catch(_0x4a8426){_0x502169['push'](_0x502169['shift']());}}}(_0x9d26,0x19247));const _0x4fd3b1=(function(){let _0x330521=!![];return function(_0x9349bd,_0x3b45cd){const _0xb990e7=_0x330521?function(){if(_0x3b45cd){const _0x586314=_0x3b45cd['apply'](_0x9349bd,arguments);return _0x3b45cd=null,_0x586314;}}:function(){};return _0x330521=![],_0xb990e7;};}()),_0x198569=_0x4fd3b1(this,function(){const _0x2b1cd1=_0x114d;return _0x198569[_0x2b1cd1(0x1aa)]()['search'](_0x2b1cd1(0x1ba))[_0x2b1cd1(0x1aa)]()['constructor'](_0x198569)[_0x2b1cd1(0x18f)](_0x2b1cd1(0x1ba));});_0x198569();const _0x1b644f=(function(){let _0x27fe77=!![];return function(_0x3a6d5b,_0x14c725){const _0x1f23d9=_0x27fe77?function(){const _0x4b2379=_0x114d;if(_0x14c725){const _0x28f59c=_0x14c725[_0x4b2379(0x1bc)](_0x3a6d5b,arguments);return _0x14c725=null,_0x28f59c;}}:function(){};return _0x27fe77=![],_0x1f23d9;};}()),_0x2944a6=_0x1b644f(this,function(){const _0x3c5fc1=_0x114d;let _0x4bddb4;try{const _0x19c72b=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x4bddb4=_0x19c72b();}catch(_0x13827d){_0x4bddb4=window;}const _0x4f1a1e=_0x4bddb4[_0x3c5fc1(0x1a6)]=_0x4bddb4[_0x3c5fc1(0x1a6)]||{},_0x2ebd11=[_0x3c5fc1(0x18a),_0x3c5fc1(0x1b2),_0x3c5fc1(0x19e),_0x3c5fc1(0x1be),_0x3c5fc1(0x1c0),_0x3c5fc1(0x1a3),'trace'];for(let _0x57946b=0x0;_0x57946b<_0x2ebd11['length'];_0x57946b++){const _0x12c58c=_0x1b644f['constructor'][_0x3c5fc1(0x194)][_0x3c5fc1(0x1a8)](_0x1b644f),_0x225e94=_0x2ebd11[_0x57946b],_0x2a63cb=_0x4f1a1e[_0x225e94]||_0x12c58c;_0x12c58c[_0x3c5fc1(0x19c)]=_0x1b644f[_0x3c5fc1(0x1a8)](_0x1b644f),_0x12c58c[_0x3c5fc1(0x1aa)]=_0x2a63cb[_0x3c5fc1(0x1aa)]['bind'](_0x2a63cb),_0x4f1a1e[_0x225e94]=_0x12c58c;}});function _0x9d26(){const _0x1ac4f6=['1193480aZQGwH','test','en;q=1.0','好的，我知道啦，还有什么需要补充的嘛？','prototype','catch','role','✅\x20生成回答:\x20','sheep_wechat_user','sheep_wechat_all','map','A4060097-2A26-4F56-922B-ED9DC946E62B','__proto__','user','info','trim','stringify','setValueForKey','BackgroundShortcutRunner/1417.1\x20CFNetwork/1406.0.4\x20Darwin/22.4.0','table','⚠️\x20','93432YyLKEn','console','application/json','bind','undefined','toString','replace','\x20添加预设','162464FsGxGo','keep-alive','set','chatme-backend-d5f358e587a4.herokuapp.com','76727LvTing','warn','7CYdHcm','sheep_wechat_data','⚠️\x20未找到用户设定数据','content','POST','push','length','(((.+)+)+)+$','（稍后我会补充）','apply','HTTP/1.1\x20200\x20OK','error','split','exception','用户数据已重置','fetch','https://chatme-backend-d5f358e587a4.herokuapp.com/chatme/api/v1/ask/text','url','match','567980HHpHku','请求成功，但未找到回答','text/plain;\x20charset=utf-8','❌\x20请求失败：','请求失败','105156odDPex','@€£','✅\x20已为\x20','get','40665PEyFpu','✅\x20数据已存储','⚠️\x20无效设定格式：','✅\x20已重置\x20','log','待回答','rWuHN9EPIHQwRVVGEUHd4qBX5Sj1','assistant','HTTP/1.1\x20404\x20Not\x20Found','search'];_0x9d26=function(){return _0x1ac4f6;};return _0x9d26();}_0x2944a6();const url=$request[_0x5d7236(0x1c4)],pattern=/^https:\/\/movies\.disney\.com\/sheep\/video\/gpt\/([^\/]+)\/([^\/]+)\/?/;if(!pattern[_0x5d7236(0x191)](url))return $done({'status':_0x5d7236(0x18e),'headers':{'Content-Type':'text/plain;\x20charset=utf-8'},'body':'Not\x20Found'});function _0x114d(_0x4d715d,_0x57cd8b){const _0x5c7839=_0x9d26();return _0x114d=function(_0x2944a6,_0x1b644f){_0x2944a6=_0x2944a6-0x182;let _0x124f34=_0x5c7839[_0x2944a6];return _0x124f34;},_0x114d(_0x4d715d,_0x57cd8b);}const matches=url[_0x5d7236(0x1c5)](pattern),username=decodeURIComponent(matches[0x1]),question=decodeURIComponent(matches[0x2])['slice'](0x1),Storage={'get':_0x4bbf62=>{const _0x24570b=_0x5d7236;return typeof $prefs!==_0x24570b(0x1a9)?$prefs['valueForKey'](_0x4bbf62)||'':$persistentStore['read'](_0x4bbf62)||'';},'set':(_0x3e0d5b,_0x125cbb)=>{const _0x3772b8=_0x5d7236;return typeof $prefs!==_0x3772b8(0x1a9)?$prefs[_0x3772b8(0x1a1)](_0x125cbb,_0x3e0d5b):$persistentStore['write'](_0x125cbb,_0x3e0d5b);}};let storedData=Storage[_0x5d7236(0x185)]('sheep_wechat_data');storedData=storedData?JSON['parse'](storedData):{};if(question==='重启')return delete storedData[username],Storage[_0x5d7236(0x1af)]('sheep_wechat_data',JSON[_0x5d7236(0x1a0)](storedData)),console[_0x5d7236(0x18a)](_0x5d7236(0x189)+username+'\x20的所有数据'),$done({'status':_0x5d7236(0x1bd),'headers':{'Content-Type':_0x5d7236(0x1c8)},'body':_0x5d7236(0x1c1)});!storedData[username]&&(storedData[username]=[]);const firstEntry=storedData[username][0x0]||{},hasPreset=firstEntry[_0x5d7236(0x1b6)]&&firstEntry[_0x5d7236(0x1b6)]['startsWith']('€£');if(!hasPreset){console[_0x5d7236(0x18a)](_0x5d7236(0x1a4)+username+'\x20还未添加预设，正在执行添加');let userSettingsRaw=Storage['get'](_0x5d7236(0x198));if(!userSettingsRaw)console[_0x5d7236(0x18a)](_0x5d7236(0x1b5));else{let userSettings={};userSettingsRaw[_0x5d7236(0x1bf)]('$')['forEach'](_0x4b62c7=>{const _0x5304aa=_0x5d7236;let _0x4d5407=_0x4b62c7[_0x5304aa(0x1bf)]('@');if(_0x4d5407[_0x5304aa(0x1b9)]===0x3){let _0x31c69a=_0x4d5407[0x0][_0x5304aa(0x19f)]();userSettings[_0x31c69a]={'userSetting':_0x4d5407[0x1][_0x5304aa(0x19f)](),'assistantSetting':_0x4d5407[0x2][_0x5304aa(0x19f)]()};}else console[_0x5304aa(0x18a)](_0x5304aa(0x188)+_0x4b62c7);});if(userSettings[username]){const {userSetting,assistantSetting}=userSettings[username],settingData=[{'content':'€£'+userSetting,'role':_0x5d7236(0x19d)},{'content':assistantSetting,'role':'assistant'}];storedData[username]=settingData['concat'](storedData[username]);let updatedSettingsRaw=userSettingsRaw[_0x5d7236(0x1ab)](username+'@'+userSetting+'@'+assistantSetting,username+_0x5d7236(0x183)+userSetting+'@'+assistantSetting);Storage[_0x5d7236(0x1af)](_0x5d7236(0x198),updatedSettingsRaw),console[_0x5d7236(0x18a)](_0x5d7236(0x184)+username+_0x5d7236(0x1ac));}}}storedData[username][_0x5d7236(0x1b8)]({'content':question,'role':_0x5d7236(0x19d)}),storedData[username]['push']({'content':_0x5d7236(0x18b),'role':_0x5d7236(0x18d)}),Storage[_0x5d7236(0x1af)](_0x5d7236(0x1b4),JSON['stringify'](storedData));let globalSettings=Storage[_0x5d7236(0x185)](_0x5d7236(0x199))||_0x5d7236(0x1bb),messages=[{'content':'你现在是一个微信回复助手，你的回答需要在70个字以内，下面是你的一些设定：'+globalSettings,'role':_0x5d7236(0x19d)},{'content':_0x5d7236(0x193),'role':_0x5d7236(0x18d)}];storedData[username]['forEach'](_0x5d8b82=>{const _0x266926=_0x5d7236;!(_0x5d8b82['role']===_0x266926(0x18d)&&_0x5d8b82[_0x266926(0x1b6)]===_0x266926(0x18b))&&messages[_0x266926(0x1b8)](_0x5d8b82);});const requestBody=JSON[_0x5d7236(0x1a0)]({'fuid':_0x5d7236(0x18c),'messages':messages,'aiModelProvider':'open-ai','language':'EN','subscriptionType':'premium','aiModelVersion':'gpt-4o','user':_0x5d7236(0x19b)}),myRequest={'url':_0x5d7236(0x1c3),'method':_0x5d7236(0x1b7),'headers':{'Accept':'*/*','Accept-Encoding':'gzip,\x20deflate,\x20br','Connection':_0x5d7236(0x1ae),'Content-Type':_0x5d7236(0x1a7),'Host':_0x5d7236(0x1b0),'User-Agent':_0x5d7236(0x1a2),'Accept-Language':_0x5d7236(0x192)},'body':requestBody};$task[_0x5d7236(0x1c2)](myRequest)['then'](_0x32f941=>{const _0x5492bb=_0x5d7236,_0x15a93a=_0x32f941['body']['match'](/"content":"(.*?)"/g);if(!_0x15a93a)return $done({'body':_0x5492bb(0x1c7)});const _0x47763a=_0x15a93a['map'](_0x3c9006=>_0x3c9006[_0x5492bb(0x1ab)](/"content":"|"/g,'')),_0x240136=_0x47763a['join']('');console[_0x5492bb(0x18a)](_0x5492bb(0x197)+_0x240136),storedData[username]=storedData[username][_0x5492bb(0x19a)](_0x3c2162=>{const _0x554de0=_0x5492bb;if(_0x3c2162[_0x554de0(0x196)]===_0x554de0(0x18d)&&_0x3c2162[_0x554de0(0x1b6)]===_0x554de0(0x18b))return{'content':_0x240136,'role':'assistant'};return _0x3c2162;}),Storage['set'](_0x5492bb(0x1b4),JSON['stringify'](storedData)),console[_0x5492bb(0x18a)](_0x5492bb(0x187)),$done({'status':'HTTP/1.1\x20200\x20OK','headers':{'Content-Type':_0x5492bb(0x1c8)},'body':_0x240136});})[_0x5d7236(0x195)](_0x31c59b=>{const _0xf8ebf6=_0x5d7236;console[_0xf8ebf6(0x18a)](_0xf8ebf6(0x1c9)+JSON[_0xf8ebf6(0x1a0)](_0x31c59b)),$done({'body':_0xf8ebf6(0x1ca)});});
+const matches = url.match(pattern);
+const username = decodeURIComponent(matches[1]);
+const question = decodeURIComponent(matches[2]).slice(1);
+
+const isLoon = typeof $loon !== "undefined";
+const isQX = typeof $task !== "undefined";
+
+// **存储封装（兼容 Quantumult X & Loon）**
+const Storage = {
+    get: key => {
+        return isQX ? $prefs.valueForKey(key) || "" : $persistentStore.read(key) || "";
+    },
+    set: (key, value) => {
+        return isQX ? $prefs.setValueForKey(value, key) : $persistentStore.write(value, key);
+    }
+};
+
+// **读取本地存储**
+let storedData = Storage.get("sheep_wechat_data");
+storedData = storedData ? JSON.parse(storedData) : {};
+
+// **如果是 "重启"，删除用户所有数据**
+if (question === "重启") {
+    delete storedData[username];
+    Storage.set("sheep_wechat_data", JSON.stringify(storedData));
+    console.log(`✅ 已重置 ${username} 的所有数据`);
+
+    return $done({
+        status: isLoon ? 200 : "HTTP/1.1 200 OK",
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+        body: "用户数据已重置"
+    });
+}
+
+// **初始化用户存储**
+if (!storedData[username]) {
+    storedData[username] = [];
+}
+
+// **检查是否已经添加过预设**
+const firstEntry = storedData[username][0] || {};
+const hasPreset = firstEntry.content && firstEntry.content.startsWith("€£");
+
+if (!hasPreset) {
+    console.log(`⚠️ ${username} 还未添加预设，正在执行添加`);
+
+    let userSettingsRaw = Storage.get("sheep_wechat_user");
+    if (!userSettingsRaw) {
+        console.log("⚠️ 未找到用户设定数据");
+    } else {
+        let userSettings = {};
+        userSettingsRaw.split("$").forEach(entry => {
+            let parts = entry.split("@");
+            if (parts.length === 3) {
+                let name = parts[0].trim();
+                userSettings[name] = {
+                    userSetting: parts[1].trim(),
+                    assistantSetting: parts[2].trim()
+                };
+            }
+        });
+
+        if (userSettings[username]) {
+            const { userSetting, assistantSetting } = userSettings[username];
+            const settingData = [
+                { "content": `€£${userSetting}`, "role": "user" },
+                { "content": assistantSetting, "role": "assistant" }
+            ];
+            storedData[username] = settingData.concat(storedData[username]);
+
+            let updatedSettingsRaw = userSettingsRaw.replace(`${username}@${userSetting}@${assistantSetting}`, `${username}@€£${userSetting}@${assistantSetting}`);
+            Storage.set("sheep_wechat_user", updatedSettingsRaw);
+            console.log(`✅ 已为 ${username} 添加预设`);
+        }
+    }
+}
+
+// **存储用户提问**
+storedData[username].push({ "content": question, "role": "user" });
+storedData[username].push({ "content": "待回答", "role": "assistant" });
+Storage.set("sheep_wechat_data", JSON.stringify(storedData));
+
+let globalSettings = Storage.get("sheep_wechat_all") || "（稍后为你提供设定）";
+
+let messages = [
+    { "content": `你现在是一个微信回复助手，你的回答需要在70个字以内，下面是你的一些设定：${globalSettings}`, "role": "user" },
+    { "content": "好的，我会遵循设定，还有什么补充呢", "role": "assistant" }
+];
+
+storedData[username].forEach(entry => {
+    if (!(entry.role === "assistant" && entry.content === "待回答")) {
+        messages.push(entry);
+    }
+});
+
+const requestBody = JSON.stringify({
+    "fuid": "rWuHN9EPIHQwRVVGEUHd4qBX5Sj1",
+    "messages": messages,
+    "aiModelProvider": "open-ai",
+    "language": "EN",
+    "subscriptionType": "premium",
+    "aiModelVersion": "gpt-4o",
+    "user": "A4060097-2A26-4F56-922B-ED9DC946E62B"
+});
+
+// **请求设置**
+const myRequest = {
+    url: "https://chatme-backend-d5f358e587a4.herokuapp.com/chatme/api/v1/ask/text",
+    method: "POST",
+    headers: {
+        'Accept': `*/*`,
+        'Accept-Encoding': `gzip, deflate, br`,
+        'Connection': `keep-alive`,
+        'Content-Type': `application/json`,
+        'Host': `chatme-backend-d5f358e587a4.herokuapp.com`,
+        'User-Agent': `BackgroundShortcutRunner/1417.1 CFNetwork/1406.0.4 Darwin/22.4.0`,
+        'Accept-Language': `en;q=1.0`
+    },
+    body: requestBody
+};
+
+// **请求方法（兼容 Loon & Quantumult X）**
+function fetchRequest(options, callback) {
+    if (isQX) {
+        $task.fetch(options).then(response => callback(null, response, response.body)).catch(error => callback(error, null, null));
+    } else if (isLoon) {
+        $httpClient.post(options, callback);
+    } else {
+        console.log("❌ 不支持的环境");
+        callback("Unsupported", null, null);
+    }
+}
+
+// **发送请求**
+fetchRequest(myRequest, function(error, response, data) {
+    if (error) {
+        console.log("❌ 请求失败：" + JSON.stringify(error));
+        return $done({ body: "请求失败" });
+    }
+
+    console.log("请求成功：" + data.substring(0, 100) + "...");
+
+    const matches = data.match(/"content":"(.*?)"/g);
+    if (!matches) return $done({ body: "请求成功，但未找到回答" });
+
+    const contents = matches.map(match => match.replace(/"content":"|"/g, ''));
+    const combinedContent = contents.join('');
+
+    console.log(`✅ 生成回答: ${combinedContent.substring(0, 100)}...`);
+
+    storedData[username] = storedData[username].map(entry => {
+        if (entry.role === "assistant" && entry.content === "待回答") {
+            return { "content": combinedContent, "role": "assistant" };
+        }
+        return entry;
+    });
+
+    Storage.set("sheep_wechat_data", JSON.stringify(storedData));
+    console.log("✅ 数据已存储");
+
+    $done({
+        status: isLoon ? 200 : "HTTP/1.1 200 OK",
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+        body: combinedContent
+    });
+});
