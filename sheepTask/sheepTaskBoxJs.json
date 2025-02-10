@@ -147,7 +147,7 @@
       "scripts": [
         {
           "name": "手动删除用户记录",
-          "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepWeChatPKC/sheepwechacheck.js"
+          "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepWeChatPKC/sheepwechatcheck.js"
         },
         {
           "name": "查询目前所有聊天信息",
