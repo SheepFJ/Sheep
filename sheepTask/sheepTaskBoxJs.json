@@ -151,7 +151,7 @@
         },
         {
           "name": "手动删除用户记录",
-          "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepWeChatPKC/sheepwechatdelect.js"
+          "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepWeChatPKC/sheepwechatdelete.js"
         }
         
       ]
