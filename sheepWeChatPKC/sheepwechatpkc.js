@@ -25,6 +25,9 @@ hostname = movies.disney.com
 const url = $request.url;
 const pattern = /^https:\/\/movies\.disney\.com\/sheep\/video\/gpt\/([^\/]+)\/([^\/]+)\/?/;
 
+const isLoon = typeof $loon !== "undefined";
+const isQX = typeof $task !== "undefined";
+
 // **无效请求，返回 404**
 if (!pattern.test(url)) {
     return $done({
@@ -38,24 +41,17 @@ const matches = url.match(pattern);
 const username = decodeURIComponent(matches[1]);
 const question = decodeURIComponent(matches[2]).slice(1);
 
-const isLoon = typeof $loon !== "undefined";
-const isQX = typeof $task !== "undefined";
-
 // **存储封装（兼容 Quantumult X & Loon）**
 const Storage = {
-    get: key => {
-        return isQX ? $prefs.valueForKey(key) || "" : $persistentStore.read(key) || "";
-    },
-    set: (key, value) => {
-        return isQX ? $prefs.setValueForKey(value, key) : $persistentStore.write(value, key);
-    }
+    get: key => isQX ? $prefs.valueForKey(key) || "" : $persistentStore.read(key) || "",
+    set: (key, value) => isQX ? $prefs.setValueForKey(value, key) : $persistentStore.write(value, key)
 };
 
 // **读取本地存储**
 let storedData = Storage.get("sheep_wechat_data");
 storedData = storedData ? JSON.parse(storedData) : {};
 
-// **如果是 "重启"，删除用户所有数据**
+// **"重启" 指令，删除用户数据**
 if (question === "重启") {
     delete storedData[username];
     Storage.set("sheep_wechat_data", JSON.stringify(storedData));
@@ -73,7 +69,7 @@ if (!storedData[username]) {
     storedData[username] = [];
 }
 
-// **检查是否已经添加过预设**
+// **检查是否已有预设**
 const firstEntry = storedData[username][0] || {};
 const hasPreset = firstEntry.content && firstEntry.content.startsWith("€£");
 
@@ -81,15 +77,12 @@ if (!hasPreset) {
     console.log(`⚠️ ${username} 还未添加预设，正在执行添加`);
 
     let userSettingsRaw = Storage.get("sheep_wechat_user");
-    if (!userSettingsRaw) {
-        console.log("⚠️ 未找到用户设定数据");
-    } else {
+    if (userSettingsRaw) {
         let userSettings = {};
         userSettingsRaw.split("$").forEach(entry => {
             let parts = entry.split("@");
             if (parts.length === 3) {
-                let name = parts[0].trim();
-                userSettings[name] = {
+                userSettings[parts[0].trim()] = {
                     userSetting: parts[1].trim(),
                     assistantSetting: parts[2].trim()
                 };
@@ -98,11 +91,10 @@ if (!hasPreset) {
 
         if (userSettings[username]) {
             const { userSetting, assistantSetting } = userSettings[username];
-            const settingData = [
+            storedData[username] = [
                 { "content": `€£${userSetting}`, "role": "user" },
                 { "content": assistantSetting, "role": "assistant" }
-            ];
-            storedData[username] = settingData.concat(storedData[username]);
+            ].concat(storedData[username]);
 
             let updatedSettingsRaw = userSettingsRaw.replace(`${username}@${userSetting}@${assistantSetting}`, `${username}@€£${userSetting}@${assistantSetting}`);
             Storage.set("sheep_wechat_user", updatedSettingsRaw);
@@ -160,7 +152,13 @@ function fetchRequest(options, callback) {
     if (isQX) {
         $task.fetch(options).then(response => callback(null, response, response.body)).catch(error => callback(error, null, null));
     } else if (isLoon) {
-        $httpClient.post(options, callback);
+        $httpClient.post(options, function(error, response, data) {
+            if (error) {
+                callback(error, null, null);
+            } else {
+                callback(null, response, data);
+            }
+        });
     } else {
         console.log("❌ 不支持的环境");
         callback("Unsupported", null, null);
