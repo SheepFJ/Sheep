@@ -1,15 +1,6 @@
-// **存储封装（兼容 Quantumult X & Loon）**
 const Storage = {
-    get: key => {
-        return typeof $prefs !== "undefined" 
-            ? $prefs.valueForKey(key) || ""
-            : $persistentStore.read(key) || "";
-    },
-    set: (key, value) => {
-        return typeof $prefs !== "undefined" 
-            ? $prefs.setValueForKey(value, key)
-            : $persistentStore.write(value, key);
-    }
+    get: key => $prefs.valueForKey(key) || "",
+    set: (key, value) => $prefs.setValueForKey(value, key)
 };
 
 // **读取待删除用户列表**
