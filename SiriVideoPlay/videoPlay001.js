@@ -68,6 +68,11 @@ const html = `<!DOCTYPE html>
         <label><input type="checkbox" value="https://p2100.net/api.php/provide/vod?ac=detail&wd=" checked> 飘零资源</label>
         <label><input type="checkbox" value="https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/?ac=detail&wd=" checked> 量子资源</label>
         <label><input type="checkbox" value="https://collect.wolongzyw.com/api.php/provide/vod?ac=detail&wd="> 卧龙资源</label>
+        
+                <label><input type="checkbox" value="https://360zy.com/api.php/provide/vod/?ac=detail&wd="> 360资源</label>
+        
+        
+        
 
         <input type="text" id="searchInput" placeholder="输入搜索内容">
         <button onclick="search()">搜索</button>
