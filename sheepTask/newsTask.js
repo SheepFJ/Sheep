@@ -26,7 +26,7 @@ $task.fetch(myRequest).then(response => {
             // 构建通知内容
             let message = "📢 今日新闻:\n\n";
             newsList.forEach((item) => {
-                message += `🌟 ${item}\n\n`; // 每条新闻前加上🌟 表情
+                message += `🌟 ${item}\n\n`;
             });
 
             // 发送通知
