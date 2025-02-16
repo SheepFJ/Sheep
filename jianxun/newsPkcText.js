@@ -14,4 +14,62 @@ TG频道：https://t.me/sheep_007xiaoyang
 hostname = movies.disney.com
 
 *************************************/
-const _0x54bf40=_0x20e6;(function(_0x1aa3cf,_0x4868f9){const _0x514e1c=_0x20e6,_0x1289e8=_0x1aa3cf();while(!![]){try{const _0x28f90b=parseInt(_0x514e1c(0x10e))/0x1*(-parseInt(_0x514e1c(0x10f))/0x2)+-parseInt(_0x514e1c(0x101))/0x3+-parseInt(_0x514e1c(0x126))/0x4*(-parseInt(_0x514e1c(0x11f))/0x5)+-parseInt(_0x514e1c(0x107))/0x6*(-parseInt(_0x514e1c(0x11b))/0x7)+parseInt(_0x514e1c(0x103))/0x8*(parseInt(_0x514e1c(0xf7))/0x9)+-parseInt(_0x514e1c(0xfb))/0xa+-parseInt(_0x514e1c(0x105))/0xb*(-parseInt(_0x514e1c(0x122))/0xc);if(_0x28f90b===_0x4868f9)break;else _0x1289e8['push'](_0x1289e8['shift']());}catch(_0x2efba9){_0x1289e8['push'](_0x1289e8['shift']());}}}(_0x5bd0,0x3c770));function _0x5bd0(){const _0x14b777=['鉂孿x20鏈嶅姟鍣ㄩ敊璇紝瑙ｆ瀽鏂伴椈澶辫触\x0a','HTTP/1.1\x20500\x20Internal\x20Server\x20Error','zh-CN','data','瑙ｆ瀽鍝嶅簲澶辫触:','toString','https://uapi.woobx.cn/v2/app/daily-news','search','123998afDKbA','error','then','HTTP/1.1\x20200\x20OK','14990osOKSq','fetch','info','60khHYKA','__proto__','HTTP/1.1\x20502\x20Bad\x20Gateway','prototype','284uFRiSE','isArray','body','news','2611521yISQZt','(((.+)+)+)+$','{}.constructor(\x22return\x20this\x22)(\x20)','HTTP/1.1\x20404\x20Not\x20Found','2418100jilqIr','apply','constructor','text/plain;\x20charset=utf-8','gzip','log','110202IoUTJf','console','8NJTwhu','exception','451528UBGdZc','table','42qWWYaZ','馃摙\x20浠婃棩鏂伴椈:\x0a\x0a','uapi.woobx.cn','return\x20(function()\x20','馃専\x20','warn','parse','102019fpyTIe','6sosoqR','鉂孿x20璇锋眰澶辫触锛岃绋嶅悗閲嶈瘯\x0a','鉂孿x20鏈幏鍙栧埌鏂伴椈鍐呭\x0a','bind'];_0x5bd0=function(){return _0x14b777;};return _0x5bd0();}const _0x12dc26=(function(){let _0x1c3bb3=!![];return function(_0x42f023,_0x189e90){const _0x2cfd7d=_0x1c3bb3?function(){if(_0x189e90){const _0x14bd52=_0x189e90['apply'](_0x42f023,arguments);return _0x189e90=null,_0x14bd52;}}:function(){};return _0x1c3bb3=![],_0x2cfd7d;};}()),_0x103563=_0x12dc26(this,function(){const _0x4f2bc4=_0x20e6;return _0x103563[_0x4f2bc4(0x118)]()[_0x4f2bc4(0x11a)]('(((.+)+)+)+$')[_0x4f2bc4(0x118)]()[_0x4f2bc4(0xfd)](_0x103563)[_0x4f2bc4(0x11a)](_0x4f2bc4(0xf8));});_0x103563();function _0x20e6(_0x138077,_0x3bba51){const _0x383392=_0x5bd0();return _0x20e6=function(_0x434664,_0x4e68eb){_0x434664=_0x434664-0xf6;let _0x5deb83=_0x383392[_0x434664];return _0x5deb83;},_0x20e6(_0x138077,_0x3bba51);}const _0x4e68eb=(function(){let _0x53617c=!![];return function(_0x412d0a,_0xa960c7){const _0x359870=_0x53617c?function(){const _0x2bbd79=_0x20e6;if(_0xa960c7){const _0x5b698f=_0xa960c7[_0x2bbd79(0xfc)](_0x412d0a,arguments);return _0xa960c7=null,_0x5b698f;}}:function(){};return _0x53617c=![],_0x359870;};}()),_0x434664=_0x4e68eb(this,function(){const _0x2cc9a1=_0x20e6,_0xd744eb=function(){const _0x4c4bf7=_0x20e6;let _0x44b325;try{_0x44b325=Function(_0x4c4bf7(0x10a)+_0x4c4bf7(0xf9)+');')();}catch(_0x59df49){_0x44b325=window;}return _0x44b325;},_0xf268e3=_0xd744eb(),_0x1ccccf=_0xf268e3[_0x2cc9a1(0x102)]=_0xf268e3[_0x2cc9a1(0x102)]||{},_0x4f2755=[_0x2cc9a1(0x100),_0x2cc9a1(0x10c),_0x2cc9a1(0x121),_0x2cc9a1(0x11c),_0x2cc9a1(0x104),_0x2cc9a1(0x106),'trace'];for(let _0x22aa43=0x0;_0x22aa43<_0x4f2755['length'];_0x22aa43++){const _0x388866=_0x4e68eb['constructor'][_0x2cc9a1(0x125)][_0x2cc9a1(0x112)](_0x4e68eb),_0x4dcda1=_0x4f2755[_0x22aa43],_0x30a6f3=_0x1ccccf[_0x4dcda1]||_0x388866;_0x388866[_0x2cc9a1(0x123)]=_0x4e68eb[_0x2cc9a1(0x112)](_0x4e68eb),_0x388866[_0x2cc9a1(0x118)]=_0x30a6f3[_0x2cc9a1(0x118)][_0x2cc9a1(0x112)](_0x30a6f3),_0x1ccccf[_0x4dcda1]=_0x388866;}});_0x434664();const url=_0x54bf40(0x119),method='GET',headers={'user-agent':'Mozilla/5.0\x20(iPhone;\x20CPU\x20iPhone\x20OS\x2016_4_1\x20like\x20Mac\x20OS\x20X)\x20AppleWebKit/605.1.15\x20(KHTML,\x20like\x20Gecko)\x20Version/16.4.1\x20Mobile/15E148\x20WoodBox-iOS/1.88.300\x20woodbox-vc/209','accept-language':_0x54bf40(0x115),'host':_0x54bf40(0x109),'accept-encoding':_0x54bf40(0xff)},body='',myRequest={'url':url,'method':method,'headers':headers,'body':body};$task[_0x54bf40(0x120)](myRequest)[_0x54bf40(0x11d)](_0x30c559=>{const _0x103b00=_0x54bf40;try{const _0x252f6f=JSON[_0x103b00(0x10d)](_0x30c559[_0x103b00(0x128)]);if(_0x252f6f&&_0x252f6f[_0x103b00(0x116)]&&Array[_0x103b00(0x127)](_0x252f6f[_0x103b00(0x116)][_0x103b00(0xf6)])){const _0x9241ee=_0x252f6f[_0x103b00(0x116)][_0x103b00(0xf6)];let _0x3b84f6=_0x103b00(0x108);_0x9241ee['forEach'](_0x26384c=>{const _0x544e47=_0x103b00;_0x3b84f6+=_0x544e47(0x10b)+_0x26384c+'\x0a\x0a';}),$done({'status':_0x103b00(0x11e),'headers':{'Content-Type':'text/plain;\x20charset=utf-8'},'body':_0x3b84f6});}else $done({'status':_0x103b00(0xfa),'headers':{'Content-Type':_0x103b00(0xfe)},'body':_0x103b00(0x111)});}catch(_0x3ab854){console[_0x103b00(0x11c)](_0x103b00(0x117),_0x3ab854),$done({'status':_0x103b00(0x114),'headers':{'Content-Type':_0x103b00(0xfe)},'body':_0x103b00(0x113)});}},_0x136835=>{const _0x5cedcd=_0x54bf40;console[_0x5cedcd(0x100)](_0x136835[_0x5cedcd(0x11c)]),$done({'status':_0x5cedcd(0x124),'headers':{'Content-Type':_0x5cedcd(0xfe)},'body':_0x5cedcd(0x110)});});
+
+const url = `https://uapi.woobx.cn/v2/app/daily-news`;
+const method = `GET`;
+const headers = {
+    'user-agent': `Mozilla/5.0 (iPhone; CPU iPhone OS 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4.1 Mobile/15E148 WoodBox-iOS/1.88.300 woodbox-vc/209`,
+    'accept-language': `zh-CN`,
+    'host': `uapi.woobx.cn`,
+    'accept-encoding': `gzip`
+};
+const body = ``;
+
+const myRequest = {
+    url: url,
+    method: method,
+    headers: headers,
+    body: body
+};
+
+$task.fetch(myRequest).then(response => {
+    try {
+        const data = JSON.parse(response.body);
+        if (data && data.data && Array.isArray(data.data.news)) {
+            const newsList = data.data.news;
+
+            // 直接构建文本响应，不使用 trim()
+            let message = "📢 今日新闻:\n\n";
+            newsList.forEach((item) => {
+                message += `🌟 ${item}\n\n`; // 每条新闻前加上🌟 表情
+            });
+
+            // 以纯文本格式返回完整数据
+            $done({
+                status: "HTTP/1.1 200 OK",
+                headers: { "Content-Type": "text/plain; charset=utf-8" },
+                body: message
+            });
+        } else {
+            $done({
+                status: "HTTP/1.1 404 Not Found",
+                headers: { "Content-Type": "text/plain; charset=utf-8" },
+                body: "❌ 未获取到新闻内容\n"
+            });
+        }
+    } catch (error) {
+        console.error("解析响应失败:", error);
+        $done({
+            status: "HTTP/1.1 500 Internal Server Error",
+            headers: { "Content-Type": "text/plain; charset=utf-8" },
+            body: "❌ 服务器错误，解析新闻失败\n"
+        });
+    }
+}, reason => {
+    console.log(reason.error);
+    $done({
+        status: "HTTP/1.1 502 Bad Gateway",
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+        body: "❌ 请求失败，请稍后重试\n"
+    });
+});
