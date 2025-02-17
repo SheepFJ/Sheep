@@ -2,6 +2,11 @@
 > 加入Telegram交流群 [Sheep交流反馈](https://t.me/sheep_007_xiaoyang).  
 > 关注Telegram通知群[Sheep资源备份分享](https://t.me/sheep_007xiaoyang).
 
+
+
+<img src="https://count.getloli.com/get/@SheepFJ">
+
+
 # 功能实现 :space_invader:
 
 <details>
