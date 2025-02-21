@@ -267,7 +267,7 @@
       "id": "sheep_oilprices",
       "name": "油价查询",
       "keys": [
-        "sheep_oilprices_province",
+        "sheep_oilprices_province"
       ],
       "descs_html": [
         "填写查询的省份，不要带省字，如:广西,上海"
