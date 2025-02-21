@@ -7,7 +7,6 @@ let encodedRegion = encodeURIComponent(region);
 const url = `https://apis.tianapi.com/oilprice/index?key=cef8e38ada89df5f8db03854dc6a96a5&prov=${encodedRegion}`;
 const method = `GET`;
 const headers = {
-  'Referer': `https://servicewechat.com/wx642ee4dcc46fa7a2/186/page-frame.html`,
   'Connection': `keep-alive`,
   'Host': `apis.tianapi.com`,
   'content-type': `application/json`,
