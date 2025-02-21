@@ -4,7 +4,9 @@
     "task": [
         "00 21 * * * https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/xiaomishuabushu.js,tag=微信刷步数,img-url=figure.walk.system,enabled=true",
         "08 12 * * * https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/jianxun.js,tag=一条简短的讯息,img-url=star.fill.system,enabled=true",
-        "09 12 * * * https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/newsTask.js,tag=每日新闻60s,img-url=star.fill.system,enabled=true"
+        "09 12 * * * https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/newsTask.js,tag=每日新闻60s,img-url=star.fill.system,enabled=true",
+        "10 12 * * * https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/TaskJs/oilPricesTask.js,tag=油价查询,img-url=https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/oilprices.png,enabled=true"
+        
 
     ]
 }
