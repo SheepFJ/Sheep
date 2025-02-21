@@ -262,6 +262,33 @@
           "script": "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/SiriVideoPlay/videoPlayListClear.js"
         }
       ]
+    },
+    {
+      "id": "sheep_oilprices",
+      "name": "油价查询",
+      "keys": [
+        "sheep_oilprices_province",
+      ],
+      "descs_html": [
+        "填写查询的省份，不要带省字，如:广西,上海"
+      ],
+      "settings": [
+        {
+          "id": "sheep_oilprices_province",
+          "name": "查询的省份",
+          "val": "湖北",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 1,
+          "desc": "默认湖北,不要带省字"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/oilprices.png",
+        "https://raw.githubusercontent.com/SheepFJ/Sheep/refs/heads/main/sheepTask/icon/oilprices.png"
+      ],
+      "author": "@Sheepfj",
+      "repo": "https://github.com/SheepFJ/Sheep"
     }
   ]
 }
